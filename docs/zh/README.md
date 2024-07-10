@@ -4,11 +4,11 @@ title: 首页
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 我的项目
-    link: /getting-started.html
+    link: ./my-projects
     type: primary
 
-  - text: 介绍
-    link: https://vuejs.press/guide/introduction.html
+  - text: 简历
+    link: /curriculum-vitae
     type: secondary
 
 features:

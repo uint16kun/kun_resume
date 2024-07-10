@@ -3,12 +3,12 @@ home: true
 title: Home
 heroImage: https://vuejs.press/images/hero.png
 actions:
-  - text: Get Started
-    link: /getting-started.html
+  - text: My projects
+    link: /my-projects
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: Curriculum Vitae
+    link: /curriculum-vitae
     type: secondary
 
 features:
