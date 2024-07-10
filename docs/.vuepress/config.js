@@ -1,7 +1,8 @@
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { searchPlugin } from '@vuepress/plugin-search'
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 export default defineUserConfig({
   // base: '/kun_resume/',
   locales: {
@@ -14,13 +15,13 @@ export default defineUserConfig({
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'Xu HanKun',
-      description: 'Xu HanKun 的简历',
+      title: '徐瀚鲲',
+      description: '徐瀚鲲的简历',
     },
   },
 
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '/logo.jpg',
     repo: 'https://github.com/uint16kun/',
     locales: {
       '/': {
@@ -52,7 +53,8 @@ export default defineUserConfig({
           '/zh/my-projects/': [
             {
               text: '我的项目',
-              children: ['',
+              link: '/zh/my-projects/',
+              children: [
                 'Moving target control and automatic tracking system',
                 'Plant growth monitoring system',
                 'Smart medicine delivery car',
@@ -68,25 +70,34 @@ export default defineUserConfig({
       },
     },
   }),
+
   plugins: [
-    ["vuepress-plugin-tags"],
-    ["img-lazy"],
-    ["@vuepress/medium-zoom"],
-    [
-      "vuepress-plugin-code-copy", {
-        successText: "代码已复制",
-      },
-    ],
-    ["searchPlugin", {
+    markdownImagePlugin({
+      // 启用 figure
+      figure: true,
+      // 启用图片懒加载
+      lazyload: true,
+      // 启用图片标记
+      mark: true,
+      // 启用图片大小
+      size: true,
+    }),
+    searchProPlugin({
       locales: {
         '/': {
           placeholder: 'Search',
         },
         '/zh/': {
           placeholder: '搜索',
-        },
-      },
-    }]
+        }
+      }
+    }),
   ],
+  markdown: {
+    // 开启代码块的行号
+    lineNumbers: true,
+    // 支持 4 级以上的标题渲染
+    extractHeaders: ["h2", "h3"],
+  },
   bundler: viteBundler(),
 })

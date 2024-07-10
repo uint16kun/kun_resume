@@ -16,20 +16,3 @@ export const routes = Object.fromEntries([
   ["/zh/my-projects/Smart%20medicine%20delivery%20car.html", { loader: () => import(/* webpackChunkName: "zh_my-projects_Smart medicine delivery car.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/zh/my-projects/Smart medicine delivery car.html.js"), meta: {"title":"智能送药小车"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-  }
-  if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  })
-}

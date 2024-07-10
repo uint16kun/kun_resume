@@ -4,11 +4,11 @@ title: 首页
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 我的项目
-    link: ./my-projects
+    link: /zh/my-projects/
     type: primary
 
   - text: 简历
-    link: /curriculum-vitae
+    link: /zh/curriculum-vitae/
     type: secondary
 
 features:
@@ -17,9 +17,10 @@ features:
   - title: 专业
     details: 电子信息工程
   - title: 研究领域
-    details: 自动控制，图形处理
+    details: 自动控制，图像处理
   - title: 奖学金
-    details: 2021-2022 学年校一等奖学金,2022-2023 学年校特等奖学金
+    details:
+      "2021-2022 学年校一等奖学金，2022-2023 学年校特等奖学金"
   - title: 竞赛
     details: 2022 年全国大学生电子设计竞赛省三等奖，2023 年全国大学生电子设计竞赛国家二等奖，2024 年全国大学生电子设计竞赛科技前沿邀请赛（已入围国赛）
   - title: 绩点（5分制）
