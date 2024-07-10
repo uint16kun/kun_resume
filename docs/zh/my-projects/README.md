@@ -3,7 +3,7 @@
 >[运动目标控制与自动追踪系统](Moving%20target%20control%20and%20automatic%20tracking%20system.md)
 >- 设计制作一个运动目标控制与自动追踪系统，系统包括模拟目标运动的红色光斑位置控制系统和指示自动追踪的绿色光斑位置控制系统，通过摄像头和二维云台实现精确控制。
 ***
->[植物生长监测系统](Plant%20growth%20monitoring%20system.md)
+>[盆栽植物高通量表型监测系统](High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.md)
 >- 设计制作一个植物生长监测系统，对土壤环境进行监测，使用单点激光对植物进行3D建模并且在云端显示。
 ***
 >[智能送药小车](Smart%20medicine%20delivery%20car.md)

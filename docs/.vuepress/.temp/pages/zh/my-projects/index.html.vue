@@ -8,7 +8,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p><RouteLink to="/zh/my-projects/Plant%20growth%20monitoring%20system.html">植物生长监测系统</RouteLink></p>
+<p><RouteLink to="/zh/my-projects/High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.html">盆栽植物高通量表型监测系统</RouteLink></p>
 <ul>
 <li>设计制作一个植物生长监测系统，对土壤环境进行监测，使用单点激光对植物进行3D建模并且在云端显示。</li>
 </ul>

@@ -42,7 +42,7 @@ export default defineUserConfig({
               link: '/my-projects/',
               children: [
                 'Moving target control and automatic tracking system',
-                'Plant growth monitoring system',
+                'High-throughput phenotyping system for potted plants',
                 'Smart medicine delivery car',
                 'Brushless motor drive circuit and FOC control algorithm design',
                 'Rolling ball control system',
@@ -72,7 +72,7 @@ export default defineUserConfig({
               link: '/zh/my-projects/',
               children: [
                 'Moving target control and automatic tracking system',
-                'Plant growth monitoring system',
+                'High-throughput phenotyping system for potted plants',
                 'Smart medicine delivery car',
                 'Brushless motor drive circuit and FOC control algorithm design',
                 'Rolling ball control system',
