@@ -35,6 +35,22 @@ export default defineUserConfig({
             text: 'Curriculum Vitae',
             link: '/curriculum-vitae/',
           }],
+        sidebar: {
+          '/zh/my-projects/': [
+            {
+              text: '我的项目',
+              link: '/my-projects/',
+              children: [
+                'Moving target control and automatic tracking system',
+                'Plant growth monitoring system',
+                'Smart medicine delivery car',
+                'Brushless motor drive circuit and FOC control algorithm design',
+                'Rolling ball control system',
+                'Car following driving system',
+                'Non-contact object size and shape measurement']
+            },
+          ],
+        },
         selectLanguageName: 'English',
         selectLanguageText: 'Languages',
       },
