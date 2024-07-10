@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: https://vuejs.press/images/hero.png
+# heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: My projects
     link: /my-projects/

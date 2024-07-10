@@ -1,7 +1,7 @@
 ---
 home: true
 title: 首页
-heroImage: https://vuejs.press/images/hero.png
+# heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 我的项目
     link: /zh/my-projects/

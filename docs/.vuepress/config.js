@@ -3,15 +3,21 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+import mathjax3 from 'markdown-it-mathjax3'
 export default defineUserConfig({
+  extendsMarkdown: md => {
+    md.use(mathjax3)
+    md.linkify.set({ fuzzyEmail: false })
+  },
+
   // base: '/kun_resume/',
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator',
+      title: 'Xu HanKun',
+      description: 'Xu HanKun\'s resume',
     },
     '/zh/': {
       lang: 'zh-CN',
