@@ -42,7 +42,7 @@ export default defineUserConfig({
             link: '/curriculum-vitae/',
           }],
         sidebar: {
-          '/zh/my-projects/': [
+          '/my-projects/': [
             {
               text: '我的项目',
               link: '/my-projects/',
@@ -56,6 +56,12 @@ export default defineUserConfig({
                 'Non-contact object size and shape measurement']
             },
           ],
+          '/info/':[
+            {
+              text: '信息',
+              link: '/info/',
+            },
+          ]
         },
         selectLanguageName: 'English',
         selectLanguageText: 'Languages',
