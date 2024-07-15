@@ -3,7 +3,7 @@
 >[运动目标控制与自动追踪系统](Moving%20target%20control%20and%20automatic%20tracking%20system.md)
 >- 使用NVIDIA Jetson平台、OpenCV计算机视觉库以及无刷电机搭建的二维平台，实现对运动目标的实时检测、跟踪与控制。
 ***
->[盆栽植物高通量表型监测系统](High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.md)
+>[盆栽植物高通量表型监测系统](High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.md)
 >- 使用步进电机搭建的二维旋转平台，以及单点激光测距模块对植物进行3D建模，通过光谱分析植物生长状况。并将数据展示在使用Vue框架开发的网页上。
 ***
 >[智能送药小车](Smart%20medicine%20delivery%20car.md)

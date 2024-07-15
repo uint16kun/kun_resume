@@ -1,7 +1,7 @@
 ---
 home: true
 title: 首页
-# heroImage: https://vuejs.press/images/hero.png
+heroImage: /photo.png
 actions:
   - text: 我的项目
     link: /zh/my-projects/
@@ -21,7 +21,7 @@ features:
   - title: 奖学金
     details: 2021-2022 学年校一等奖学金，2022-2023 学年校特等奖学金
   - title: 竞赛
-    details: 2022 年全国大学生电子设计竞赛省三等奖，2023 年全国大学生电子设计竞赛国家二等奖，2024 年全国大学生电子设计竞赛科技前沿邀请赛（已入围国赛）
+    details: 2022 年全国大学生电子设计竞赛省三等奖，2023 年全国大学生电子设计竞赛国家二等奖，2024 年全国大学生电子设计竞赛科技前沿邀请赛省一等奖
   - title: 绩点（5分制）
     details: 平均绩点4.00，第一学期4.00，第二学期3.93，第三学期3.87，第四学期3.92，第五学期4.03，第六学期4.49
 ---

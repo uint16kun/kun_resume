@@ -8,7 +8,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p><RouteLink to="/zh/my-projects/High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.html">盆栽植物高通量表型监测系统</RouteLink></p>
+<p><RouteLink to="/zh/my-projects/High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.html">盆栽植物高通量表型监测系统</RouteLink></p>
 <ul>
 <li>使用步进电机搭建的二维旋转平台，以及单点激光测距模块对植物进行3D建模，通过光谱分析植物生长状况。并将数据展示在使用Vue框架开发的网页上。</li>
 </ul>

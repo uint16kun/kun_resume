@@ -1,9 +1,9 @@
 ---
 home: true
 title: Home
-# heroImage: https://vuejs.press/images/hero.png
+heroImage: /photo.png
 actions:
-  - text: My projects
+  - text: My Projects
     link: /my-projects/
     type: primary
 
@@ -12,16 +12,16 @@ actions:
     type: secondary
 
 features:
-  - title: 
-    details: 
-  - title: 
-    details: 
-  - title: 
-    details: 
-  - title: 
-    details: 
-  - title: 
-    details: 
-  - title: 
-    details: 
+  - title: School
+    details: Huzhou University
+  - title: Major
+    details: Electronic Information Engineering
+  - title: Research Fields
+    details: Machine Vision, Automatic Control Systems, Embedded System Design, Digital/Analog Circuit Design, Front-end/Back-end Development, Internet of Things System Development
+  - title: Scholarships
+    details: First-class Scholarship of the School for the 2021-2022 academic year, Special Scholarship of the School for the 2022-2023 academic year
+  - title: Subject Competitions
+    details: 2022 National College Student Electronic Design Competition Provincial Third Prize, 2023 National College Student Electronic Design Competition National Second Prize, 2024 National College Electronic Design Competition Technology Frontier Invitation Competition Provincial First Prize
+  - title: GPA (5-point scale)
+    details: Average GPA 4.00, First Semester 4.00, Second Semester 3.93, Third Semester 3.87, Fourth Semester 3.92, Fifth Semester 4.03, Sixth Semester 4.49
 ---

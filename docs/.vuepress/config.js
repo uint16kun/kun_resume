@@ -16,14 +16,19 @@ export default defineUserConfig({
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'en-US',
-      title: 'Xu HanKun',
-      description: 'Xu HanKun\'s resume',
+      title: 'Hankun Xu',
+      description: 'Hankun Xu\'s resume',
     },
     '/zh/': {
       lang: 'zh-CN',
       title: '徐瀚鲲',
       description: '徐瀚鲲的简历',
     },
+    '/jp/': {
+      lang: 'ja-JP',
+      title: '徐瀚鲲',
+      description: '徐瀚鲲の履歴書',
+    }
   },
 
   theme: defaultTheme({
@@ -48,15 +53,16 @@ export default defineUserConfig({
               link: '/my-projects/',
               children: [
                 'Moving target control and automatic tracking system',
-                'High-throughput phenotyping system for potted plants',
+                'High-throughput phenotype monitoring system for potted plants',
                 'Smart medicine delivery car',
-                'Brushless motor drive circuit and FOC control algorithm design',
                 'Rolling ball control system',
                 'Car following driving system',
-                'Non-contact object size and shape measurement']
+                'Non-contact object size and shape measurement',
+                'Brushless motor drive circuit and FOC control algorithm design',
+              ]
             },
           ],
-          '/info/':[
+          '/info/': [
             {
               text: '信息',
               link: '/info/',
@@ -84,18 +90,50 @@ export default defineUserConfig({
               link: '/zh/my-projects/',
               children: [
                 'Moving target control and automatic tracking system',
-                'High-throughput phenotyping system for potted plants',
+                'High-throughput phenotype monitoring system for potted plants',
                 'Smart medicine delivery car',
-                'Brushless motor drive circuit and FOC control algorithm design',
                 'Rolling ball control system',
                 'Car following driving system',
-                'Non-contact object size and shape measurement']
+                'Non-contact object size and shape measurement',
+                'Brushless motor drive circuit and FOC control algorithm design',
+              ]
             },
           ],
         },
         selectLanguageName: '简体中文',
         selectLanguageText: '语言',
       },
+      '/jp/': {
+        editLink: false,
+        navbar: ['/jp/',
+          {
+            text: '私のプロジェクト',
+            link: '/jp/my-projects/',
+          },
+          {
+            text: '履歴書',
+            link: '/jp/curriculum-vitae/',
+          }],
+        sidebar: {
+          '/jp/my-projects/': [
+            {
+              text: '私のプロジェクト',
+              link: '/jp/my-projects/',
+              children: [
+                'Moving target control and automatic tracking system',
+                'High-throughput phenotype monitoring system for potted plants',
+                'Smart medicine delivery car',
+                'Rolling ball control system',
+                'Car following driving system',
+                'Non-contact object size and shape measurement',
+                'Brushless motor drive circuit and FOC control algorithm design',
+              ]
+            },
+          ],
+        },
+        selectLanguageName: '日本語',
+        selectLanguageText: '言語',
+      }
     },
   }),
 
@@ -117,6 +155,9 @@ export default defineUserConfig({
         },
         '/zh/': {
           placeholder: '搜索',
+        },
+        '/jp/': {
+          placeholder: '検索',
         }
       }
     }),

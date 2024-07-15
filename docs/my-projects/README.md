@@ -1,10 +1,10 @@
 # Project Overview
 ***
 >[Moving Target Control and Automatic Tracking System](Moving%20target%20control%20and%20automatic%20tracking%20system.md)
->- A 2D platform built using NVIDIA Jetson platform, OpenCV computer vision library, and brushless motors to achieve real-time detection, tracking, and control of moving targets.
+>- A two-dimensional platform built using NVIDIA Jetson platform, OpenCV computer vision library, and brushless motors to achieve real-time detection, tracking, and control of moving targets.
 ***
->[High-Throughput Phenotyping Monitoring System for Potted Plants](High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.md)
->- A 2D rotating platform using stepper motors and a single-point laser ranging module for 3D modeling of plants, analyzing plant growth through spectral analysis, and displaying data on a web page developed using the Vue framework.
+>[High-Throughput Phenotyping Monitoring System for Potted Plants](High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.md)
+>- A two-dimensional rotating platform using stepper motors and a single-point laser ranging module for 3D modeling of plants, analyzing plant growth through spectral analysis, and displaying data on a web page developed using the Vue framework.
 ***
 >[Smart Medicine Delivery Car](Smart%20medicine%20delivery%20car.md)
 >- A microcontroller running a model trained with the YOLOv3 algorithm to recognize room numbers, simulating the delivery and pickup of medicines between hospital pharmacies and patient rooms.

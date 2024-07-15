@@ -41,7 +41,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 
 -   2024 **Renesas Cup** National College Electronic Design Competition
     Technology Frontier Invitation Competition **Provincial First
-    Prize** (has been advanced to the national competition)
+    Prize** 
 
 # Research 
 

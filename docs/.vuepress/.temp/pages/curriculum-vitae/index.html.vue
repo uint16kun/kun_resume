@@ -46,7 +46,7 @@ Competition <strong>National Second Prize (TOP 8%)</strong></p>
 <li>
 <p>2024 <strong>Renesas Cup</strong> National College Electronic Design Competition
 Technology Frontier Invitation Competition <strong>Provincial First
-Prize</strong> (has been advanced to the national competition)</p>
+Prize</strong></p>
 </li>
 </ul>
 <h1 id="research" tabindex="-1"><a class="header-anchor" href="#research"><span>Research</span></a></h1>

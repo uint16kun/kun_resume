@@ -3,14 +3,14 @@
 <blockquote>
 <p><RouteLink to="/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html">Moving Target Control and Automatic Tracking System</RouteLink></p>
 <ul>
-<li>A 2D platform built using NVIDIA Jetson platform, OpenCV computer vision library, and brushless motors to achieve real-time detection, tracking, and control of moving targets.</li>
+<li>A two-dimensional platform built using NVIDIA Jetson platform, OpenCV computer vision library, and brushless motors to achieve real-time detection, tracking, and control of moving targets.</li>
 </ul>
 </blockquote>
 <hr>
 <blockquote>
-<p><RouteLink to="/my-projects/High-throughput%20phenotyping%20monitoring%20system%20for%20potted%20plants.html">High-Throughput Phenotyping Monitoring System for Potted Plants</RouteLink></p>
+<p><RouteLink to="/my-projects/High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.html">High-Throughput Phenotyping Monitoring System for Potted Plants</RouteLink></p>
 <ul>
-<li>A 2D rotating platform using stepper motors and a single-point laser ranging module for 3D modeling of plants, analyzing plant growth through spectral analysis, and displaying data on a web page developed using the Vue framework.</li>
+<li>A two-dimensional rotating platform using stepper motors and a single-point laser ranging module for 3D modeling of plants, analyzing plant growth through spectral analysis, and displaying data on a web page developed using the Vue framework.</li>
 </ul>
 </blockquote>
 <hr>
