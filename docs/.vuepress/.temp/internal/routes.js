@@ -3,8 +3,8 @@ export const redirects = JSON.parse("{}")
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Home"} }],
   ["/curriculum-vitae/", { loader: () => import(/* webpackChunkName: "curriculum-vitae_index.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/curriculum-vitae/index.html.js"), meta: {"title":"Hankun Xu"} }],
-  ["/info/", { loader: () => import(/* webpackChunkName: "info_index.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/info/index.html.js"), meta: {"title":"信息"} }],
   ["/jp/", { loader: () => import(/* webpackChunkName: "jp_index.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/jp/index.html.js"), meta: {"title":"ホーム"} }],
+  ["/info/", { loader: () => import(/* webpackChunkName: "info_index.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/info/index.html.js"), meta: {"title":"信息"} }],
   ["/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html", { loader: () => import(/* webpackChunkName: "my-projects_Brushless motor drive circuit and FOC control algorithm design.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/my-projects/Brushless motor drive circuit and FOC control algorithm design.html.js"), meta: {"title":"无刷电机驱动电路及FOC控制算法设计"} }],
   ["/my-projects/Car%20following%20driving%20system.html", { loader: () => import(/* webpackChunkName: "my-projects_Car following driving system.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/my-projects/Car following driving system.html.js"), meta: {"title":"小车跟随行驶系统"} }],
   ["/my-projects/High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.html", { loader: () => import(/* webpackChunkName: "my-projects_High-throughput phenotype monitoring system for potted plants.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/my-projects/High-throughput phenotype monitoring system for potted plants.html.js"), meta: {"title":"植物生长监测系统"} }],
@@ -34,20 +34,3 @@ export const routes = Object.fromEntries([
   ["/zh/my-projects/Smart%20medicine%20delivery%20car.html", { loader: () => import(/* webpackChunkName: "zh_my-projects_Smart medicine delivery car.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/zh/my-projects/Smart medicine delivery car.html.js"), meta: {"title":"智能送药小车"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"G:/study abroad Japan/kun_resume/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-  }
-  if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes)
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
-  })
-}

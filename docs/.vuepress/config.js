@@ -58,16 +58,10 @@ export default defineUserConfig({
                 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
-                'Brushless motor drive circuit and FOC control algorithm design',
+                'Brushless motor drive circuit and FOC control algorithm design'
               ]
             },
           ],
-          '/info/': [
-            {
-              text: '信息',
-              link: '/info/',
-            },
-          ]
         },
         selectLanguageName: 'English',
         selectLanguageText: 'Languages',
@@ -95,7 +89,7 @@ export default defineUserConfig({
                 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
-                'Brushless motor drive circuit and FOC control algorithm design',
+                'Brushless motor drive circuit and FOC control algorithm design'
               ]
             },
           ],
@@ -126,7 +120,7 @@ export default defineUserConfig({
                 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
-                'Brushless motor drive circuit and FOC control algorithm design',
+                'Brushless motor drive circuit and FOC control algorithm design'
               ]
             },
           ],
