@@ -6,12 +6,12 @@
 >[High-Throughput Phenotyping Monitoring System for Potted Plants](High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.md)
 >- A two-dimensional rotating platform using stepper motors and a single-point laser ranging module for 3D modeling of plants, analyzing plant growth through spectral analysis, and displaying data on a web page developed using the Vue framework.
 ***
->[Smart Medicine Delivery Car](Smart%20medicine%20delivery%20car.md)
+<!-- >[Smart Medicine Delivery Car](Smart%20medicine%20delivery%20car.md)
 >- A microcontroller running a model trained with the YOLOv3 algorithm to recognize room numbers, simulating the delivery and pickup of medicines between hospital pharmacies and patient rooms.
 ***
 >[Rolling Ball Control System](Rolling%20ball%20control%20system.md)
 >- Using the OpenMV library in STM32H7 to identify the ball, monitor the position of the rolling ball in real-time, and control the tilt angle of the plate with servos using a PID algorithm to control the ball's position.
-***
+*** -->
 >[Car Following Driving System](Car%20following%20driving%20system.md)
 >- Line tracking through infrared sensors, distance monitoring through UWB modules, data exchange through wireless serial communication modules, and distance control through a PID algorithm.
 ***

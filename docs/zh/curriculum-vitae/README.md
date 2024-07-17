@@ -59,13 +59,13 @@
 
     -   使用步进电机和单点激光测距模块的2D旋转平台，进行植物的3D建模，通过光谱分析分析植物生长，并使用Vue框架开发的网页显示数据。
 
--   [智能送药车](https://resume.uint16kun.com/zh/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5) 指导老师:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+<!-- -   [智能送药车](https://resume.uint16kun.com/zh/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5) 指导老师:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   使用运行YOLOv3算法训练模型的微控制器识别房间号，模拟医院药房与患者房间之间的药品配送和取件。
 
 -   [滚球控制系统](https://resume.uint16kun.com/zh/my-projects/Rolling%20ball%20control%20system.html)(2022.7) 指导老师:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
-    -   使用STM32H7中的OpenMV库识别球体，实时监控滚球的位置，并使用PID算法控制伺服电机的倾斜角度来控制球的位置。
+    -   使用STM32H7中的OpenMV库识别球体，实时监控滚球的位置，并使用PID算法控制伺服电机的倾斜角度来控制球的位置。 -->
 
 -   [跟车驾驶系统](https://resume.uint16kun.com/zh/my-projects/Car%20following%20driving%20system.html)(2022.7) 指导老师:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -75,8 +75,7 @@
 
     -   通过相机分析图形边缘的形状和像素长度，通过2D云台和激光测距获得距离后计算几何参数。
 
--   [无刷电机驱动电路及FOC控制算法设计](https://resume.uint16kun.com/zh/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4) 指导老师:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
-
+-   [无刷电机驱动电路及FOC控制算法设计](https://resume.uint16kun.com/zh/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4)
     -   设计无刷电机的三相全桥驱动电路，并使用FOC算法进行控制。
 
 # 技能

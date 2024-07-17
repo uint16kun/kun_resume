@@ -78,7 +78,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         growth through spectral analysis, and displaying data on a web
         page developed using the Vue framework.
 
--   [Smart medicine delivery
+<!-- -   [Smart medicine delivery
     car](https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
@@ -96,7 +96,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
     -   Using the OpenMV library in STM32H7 to identify the ball,
         monitor the position of the rolling ball in real-time, and
         control the tilt angle of the plate with servos using a PID
-        algorithm to control the ball's position.
+        algorithm to control the ball's position. -->
 
 -   [Car following driving
     system](https://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html)(2022.7)

@@ -6,12 +6,12 @@
 >[盆栽植物高通量表型监测系统](High-throughput%20phenotype%20monitoring%20system%20for%20potted%20plants.md)
 >- 使用步进电机搭建的二维旋转平台，以及单点激光测距模块对植物进行3D建模，通过光谱分析植物生长状况。并将数据展示在使用Vue框架开发的网页上。
 ***
->[智能送药小车](Smart%20medicine%20delivery%20car.md)
+<!-- >[智能送药小车](Smart%20medicine%20delivery%20car.md)
 >- 在单片机运行使用yolov3算法训练的模型识别房间数字，模拟完成在医院药房与病房间药品的送取作业。
 ***
 >[滚球控制系统](Rolling%20ball%20control%20system.md)
 >- 在STM32H7中使用OpenMV库识别小球，实时监测滚球的位置，并通过舵机控制平板倾角，使用PID算法控制球的位置。
-***
+*** -->
 >[小车跟随行驶系统](Car%20following%20driving%20system.md)
 >- 通过红外线传感器实现巡线，UWB模块实现监测距离，通过无线串口通信模块实现数据交流，通过PID算法就行距离控制。
 ***

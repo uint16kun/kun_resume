@@ -95,30 +95,27 @@ growth through spectral analysis, and displaying data on a web
 page developed using the Vue framework.</li>
 </ul>
 </li>
-<li>
-<p><a href="https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html" target="_blank" rel="noopener noreferrer">Smart medicine delivery
-car</a>(2022.5)
-Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
-Fan</a></p>
-<ul>
-<li>A microcontroller running a model trained with the YOLOv3
-algorithm to recognize room numbers, simulating the delivery and
-pickup of medicines between hospital pharmacies and patient
-rooms.</li>
 </ul>
-</li>
-<li>
-<p><a href="https://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html" target="_blank" rel="noopener noreferrer">Rolling ball control
-system</a>(2022.7)
-Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
-Fan</a></p>
+<!-- -   [Smart medicine delivery
+    car](https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
+    Advisor:[Xiangxiang
+    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+
+    -   A microcontroller running a model trained with the YOLOv3
+        algorithm to recognize room numbers, simulating the delivery and
+        pickup of medicines between hospital pharmacies and patient
+        rooms.
+
+-   [Rolling ball control
+    system](https://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
+    Advisor:[Xiangxiang
+    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+
+    -   Using the OpenMV library in STM32H7 to identify the ball,
+        monitor the position of the rolling ball in real-time, and
+        control the tilt angle of the plate with servos using a PID
+        algorithm to control the ball's position. -->
 <ul>
-<li>Using the OpenMV library in STM32H7 to identify the ball,
-monitor the position of the rolling ball in real-time, and
-control the tilt angle of the plate with servos using a PID
-algorithm to control the ball's position.</li>
-</ul>
-</li>
 <li>
 <p><a href="https://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">Car following driving
 system</a>(2022.7)

@@ -76,18 +76,15 @@
 <li>ステッピングモータと単点レーザ測距モジュールを使用した2D回転プラットフォームで、植物の3Dモデリングを行い、スペクトル分析により植物の成長を分析し、Vueフレームワークで開発されたウェブページにデータを表示。</li>
 </ul>
 </li>
-<li>
-<p><a href="https://resume.uint16kun.com/jp/my-projects/Smart%20medicine%20delivery%20car.html" target="_blank" rel="noopener noreferrer">スマート薬品配送車</a>(2022.5) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
-<ul>
-<li>YOLOv3アルゴリズムでトレーニングされたモデルを実行するマイクロコントローラを使用して部屋番号を認識し、病院の薬局と患者部屋間の薬品配送と回収をシミュレート。</li>
 </ul>
-</li>
-<li>
-<p><a href="https://resume.uint16kun.com/jp/my-projects/Rolling%20ball%20control%20system.html" target="_blank" rel="noopener noreferrer">転がるボール制御システム</a>(2022.7) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
+<!-- -   [スマート薬品配送車](https://resume.uint16kun.com/jp/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5) 指導教員:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+
+    -   YOLOv3アルゴリズムでトレーニングされたモデルを実行するマイクロコントローラを使用して部屋番号を認識し、病院の薬局と患者部屋間の薬品配送と回収をシミュレート。
+
+-   [転がるボール制御システム](https://resume.uint16kun.com/jp/my-projects/Rolling%20ball%20control%20system.html)(2022.7) 指導教員:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+
+    -   STM32H7のOpenMVライブラリを使用してボールを認識し、リアルタイムで転がるボールの位置を監視し、PIDアルゴリズムを使用してサーボモータの傾斜角度を制御してボールの位置を制御。 -->
 <ul>
-<li>STM32H7のOpenMVライブラリを使用してボールを認識し、リアルタイムで転がるボールの位置を監視し、PIDアルゴリズムを使用してサーボモータの傾斜角度を制御してボールの位置を制御。</li>
-</ul>
-</li>
 <li>
 <p><a href="https://resume.uint16kun.com/jp/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">車両追従走行システム</a>(2022.7) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
 <ul>
@@ -101,7 +98,7 @@
 </ul>
 </li>
 <li>
-<p><a href="https://resume.uint16kun.com/jp/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">ブラシレスモータ駆動回路及びFOC制御アルゴリズム設計</a>(2023.4) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">ブラシレスモータ駆動回路及びFOC制御アルゴリズム設計</a>(2023.4)</p>
 <ul>
 <li>ブラシレスモータの三相フルブリッジ駆動回路を設計し、FOCアルゴリズムを使用して制御。</li>
 </ul>

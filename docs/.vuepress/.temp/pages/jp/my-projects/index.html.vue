@@ -14,20 +14,12 @@
 </ul>
 </blockquote>
 <hr>
-<blockquote>
-<p><RouteLink to="/jp/my-projects/Smart%20medicine%20delivery%20car.html">スマート薬品配送車</RouteLink></p>
-<ul>
-<li>シングルボードコンピュータでyolov3アルゴリズムを使用してトレーニングされたモデルを実行し、部屋番号を認識し、病院の薬局と病室間での薬品の配送・回収作業をシミュレートします。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<p><RouteLink to="/jp/my-projects/Rolling%20ball%20control%20system.html">転がるボール制御システム</RouteLink></p>
-<ul>
-<li>STM32H7でOpenMVライブラリを使用してボールを認識し、ボールの位置をリアルタイムで監視し、サーボモータを使用して平板の傾きを制御し、PIDアルゴリズムを使用してボールの位置を制御します。</li>
-</ul>
-</blockquote>
-<hr>
+<!-- >[スマート薬品配送車](Smart%20medicine%20delivery%20car.md)
+>- シングルボードコンピュータでyolov3アルゴリズムを使用してトレーニングされたモデルを実行し、部屋番号を認識し、病院の薬局と病室間での薬品の配送・回収作業をシミュレートします。
+***
+>[転がるボール制御システム](Rolling%20ball%20control%20system.md)
+>- STM32H7でOpenMVライブラリを使用してボールを認識し、ボールの位置をリアルタイムで監視し、サーボモータを使用して平板の傾きを制御し、PIDアルゴリズムを使用してボールの位置を制御します。
+*** -->
 <blockquote>
 <p><RouteLink to="/jp/my-projects/Car%20following%20driving%20system.html">車両追従走行システム</RouteLink></p>
 <ul>

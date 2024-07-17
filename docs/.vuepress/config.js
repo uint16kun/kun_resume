@@ -54,8 +54,8 @@ export default defineUserConfig({
               children: [
                 'Moving target control and automatic tracking system',
                 'High-throughput phenotype monitoring system for potted plants',
-                'Smart medicine delivery car',
-                'Rolling ball control system',
+                // 'Smart medicine delivery car',
+                // 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
                 'Brushless motor drive circuit and FOC control algorithm design'
@@ -85,8 +85,8 @@ export default defineUserConfig({
               children: [
                 'Moving target control and automatic tracking system',
                 'High-throughput phenotype monitoring system for potted plants',
-                'Smart medicine delivery car',
-                'Rolling ball control system',
+                // 'Smart medicine delivery car',
+                // 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
                 'Brushless motor drive circuit and FOC control algorithm design'
@@ -116,8 +116,8 @@ export default defineUserConfig({
               children: [
                 'Moving target control and automatic tracking system',
                 'High-throughput phenotype monitoring system for potted plants',
-                'Smart medicine delivery car',
-                'Rolling ball control system',
+                // 'Smart medicine delivery car',
+                // 'Rolling ball control system',
                 'Car following driving system',
                 'Non-contact object size and shape measurement',
                 'Brushless motor drive circuit and FOC control algorithm design'

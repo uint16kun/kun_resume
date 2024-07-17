@@ -14,20 +14,12 @@
 </ul>
 </blockquote>
 <hr>
-<blockquote>
-<p><RouteLink to="/my-projects/Smart%20medicine%20delivery%20car.html">Smart Medicine Delivery Car</RouteLink></p>
-<ul>
-<li>A microcontroller running a model trained with the YOLOv3 algorithm to recognize room numbers, simulating the delivery and pickup of medicines between hospital pharmacies and patient rooms.</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<p><RouteLink to="/my-projects/Rolling%20ball%20control%20system.html">Rolling Ball Control System</RouteLink></p>
-<ul>
-<li>Using the OpenMV library in STM32H7 to identify the ball, monitor the position of the rolling ball in real-time, and control the tilt angle of the plate with servos using a PID algorithm to control the ball's position.</li>
-</ul>
-</blockquote>
-<hr>
+<!-- >[Smart Medicine Delivery Car](Smart%20medicine%20delivery%20car.md)
+>- A microcontroller running a model trained with the YOLOv3 algorithm to recognize room numbers, simulating the delivery and pickup of medicines between hospital pharmacies and patient rooms.
+***
+>[Rolling Ball Control System](Rolling%20ball%20control%20system.md)
+>- Using the OpenMV library in STM32H7 to identify the ball, monitor the position of the rolling ball in real-time, and control the tilt angle of the plate with servos using a PID algorithm to control the ball's position.
+*** -->
 <blockquote>
 <p><RouteLink to="/my-projects/Car%20following%20driving%20system.html">Car Following Driving System</RouteLink></p>
 <ul>

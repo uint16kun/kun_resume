@@ -14,20 +14,12 @@
 </ul>
 </blockquote>
 <hr>
-<blockquote>
-<p><RouteLink to="/zh/my-projects/Smart%20medicine%20delivery%20car.html">智能送药小车</RouteLink></p>
-<ul>
-<li>在单片机运行使用yolov3算法训练的模型识别房间数字，模拟完成在医院药房与病房间药品的送取作业。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<p><RouteLink to="/zh/my-projects/Rolling%20ball%20control%20system.html">滚球控制系统</RouteLink></p>
-<ul>
-<li>在STM32H7中使用OpenMV库识别小球，实时监测滚球的位置，并通过舵机控制平板倾角，使用PID算法控制球的位置。</li>
-</ul>
-</blockquote>
-<hr>
+<!-- >[智能送药小车](Smart%20medicine%20delivery%20car.md)
+>- 在单片机运行使用yolov3算法训练的模型识别房间数字，模拟完成在医院药房与病房间药品的送取作业。
+***
+>[滚球控制系统](Rolling%20ball%20control%20system.md)
+>- 在STM32H7中使用OpenMV库识别小球，实时监测滚球的位置，并通过舵机控制平板倾角，使用PID算法控制球的位置。
+*** -->
 <blockquote>
 <p><RouteLink to="/zh/my-projects/Car%20following%20driving%20system.html">小车跟随行驶系统</RouteLink></p>
 <ul>
