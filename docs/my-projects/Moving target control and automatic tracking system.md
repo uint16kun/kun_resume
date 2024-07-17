@@ -1,180 +1,164 @@
 ---
-title: 运动目标控制与自动追踪系统
+title: Moving Target Control and Automatic Tracking System
 ---
-## **项目任务和要求**
+## **Project Tasks and Requirements**
 
-### **任务**
+### **Tasks**
 
-&emsp;设计制作一个运动目标控制与自动追踪系统。系统包括模拟目标运动的红色光斑位置控制系统和指示自动追踪的绿色光斑位置控制系统。系统结构示意及摆
-放位置见图1（a）。图中两个激光笔固定在各自独立的二维电控云台上。
-
-<div align = "center">    
-    <img src="/zh/运动目标控制与自动追踪系统/图1运动目标控制与自动追踪系统结构示意及摆放位置图.png"  align = "middle" />
-    <br></br>
-    图1 运动目标控制与自动追踪系统结构示意及摆放位置图
-</div>
-
-&emsp;红色激光笔发射的光斑用来模拟运动目标，光斑落在正前方距离1m处的白色屏幕上，光斑直径≤1cm。红色光斑位置控制系统控制光斑能在屏幕范围内任意移动。  
-
-&emsp;绿色激光笔发射的光斑由绿色光斑位置系统控制，用于自动追踪屏幕上的红色光斑，指示目标的自动追踪效果，光斑直径≤1cm。绿色激光笔放置线段如图1（b）所示，该线段与屏幕平行，位于红色激光笔两侧，距红色激光笔距离大于0.4m、小于1m。绿色激光笔在两个放置线段上任意放置。  
-
-&emsp;屏幕为白色，有效面积大于 0.6╳0.6m2。用铅笔在屏幕中心画出一个边长0.5m的正方形，标识屏幕的边线；所画的正方形的中心为原点，用铅笔画出原点位置，所用铅笔痕迹宽≤1mm。红色、绿色光斑位置控制系统必须相互独立，之间不得有任何方式通信；光斑直径小于1cm；屏幕上无任何电子元件；控制系统不能采用台式计算机或笔记本电脑。  
-
-### **要求**
-
-#### **基本要求**
-
-1. 设置运动目标位置复位功能。执行此功能，红色光斑能从屏幕任意位置回到原点。光斑中心距原点误差≤2cm。  
-
-2. 启动运动目标控制系统。红色光斑能在30秒内沿屏幕四周边线顺时针移动一周，移动时光斑中心距边线距离≤2cm。 
-
-3. 用约1.8cm宽的黑色电工胶带沿A4纸四边贴一个长方形，构成A4靶纸。将此A4靶纸贴在屏幕自定的位置。启动运动目标控制系统，红色光斑能在30 秒内沿胶带顺时针移动一周。
-
-4. 将上述A4靶纸以任意旋转角度贴在屏幕任意位置。启动运动目标控制系统，要求同 3 。
-   
-#### **发挥部分**
-1. 运动目标位置复位，一键启动自动追踪系统，控制绿色光斑能在2 秒内追踪红色光斑，追踪成功发出连续声光提示。此时两个光斑中心距离应≤3cm。
-
-2. 运动目标重复基本要求 3 ~ 4 的动作。绿色激光笔发射端可以放置在其放置线段的任意位置，同时启动运动目标及自动追踪系统，绿色光斑能自动追踪红色光斑。启动系统2秒后，应追踪成功，发出连续声光提示。
-
-&emsp;运动目标控制系统和自动追踪系统均需设置暂停键。同时按下暂停键，红色和绿色光斑应立即制动，以便测量两个光斑中心距离。
-
-## **实现方案**
-
-### <center>**摘要**</center>
-
-&emsp;针对所选题目技术参数要求，本设计以 ESP32-S3 单片机为整个系统的控制核心，选用香橙派、英伟达 jetson、无刷直流电机、二维云台、RGB 摄像头等硬件设备，通过 C++、python3.6 进行结合编程，能够较好的实现设计需求。经测试，无论 A4 靶纸处于屏幕何种位置，所设计系统均能够对于靶纸进行有效识别，云台控制的红色光斑能够于 30 秒内在靶纸上完成顺时针运动。此外，通过采用颜色空间转换、二值化处理、高斯滤波等图像处理算法，所设计的系统能够较好的实现对于红绿光斑的识别及运动追踪，在追踪过程中，不同光斑的中心距离能够时刻保持在 3 cm 以内。  
-
-###  **方案论证**
-
-&emsp;本系统主要论证电机选择、图像处理模块、主控芯片选择，其余外围配套硬件为常规设计。
-
-#### **电机选择**
-
-方案 1：以舵机作为云台主要运行结构器件
-
-&emsp;舵机是一种具有位置反馈的电机，它可以精确控制电机角度，通常由直流电机、位置传感器和控制电路组成。但舵机控制过程中**运行速度相对较慢，稳定性、精度等均相对较差**，根据选题技术指标及本队队友的尝试性测试，采用舵机并不能够满足对于激光点在运行过程中的实时位置高精度控制需求。
-
-方案 2：以步进电机作为云台主要运行结构器件
-
-&emsp;步进电机是一种电气脉冲输入型的电机，可以通过改变脉冲数量控制旋转的角度和速度，具有较高的运行精度。但**仅采用步进电机并不能够较好的实现对于激光点的稳定闭环控制**，需要通过其他传感器进行结合测试，容易产生较大的累积误差 。此外，步进电机在运动速率、动态响应、失步问题、电磁干扰等方面存在一些缺点。
-
-方案 3：以无刷直流电机作为云台主要运行结构器件
-
-&emsp;无刷直流电机能够通过电子换向器来控制电机的转子位置。无刷电机转子上的永磁体和定子上的线圈之间通过电子换向器进行交替激励，从而实现电机的转动。相较于前面两种方案，无刷直流电机具有**高效率、高转矩和高速度**的特点，通过与 PWM 和 PID 算法的控制，能够更好的满足选题激光点的快速、准确移动及跟踪，因此，本设计选用无刷直流电机作为二维云台的主要运行结构器件。
-
-#### **图像处理模块**
-
-方案 1：采用 OpenMV 自带处理模块
-
-&emsp;OpenMV 是一个基于 Python 编程语言的低功耗图像处理模块，其搭载 ARMCortex-M7 处理器，具备实时图像处理功能，如图像降噪、颜色识别、二维码条形码识别等。但本队队员对于 OpenMV 的初步测试结果表明，该图像处理模块的**摄像头性能一般 ，对于环境场景光源变化感知度不够敏感**，在识别激光的过程中，容易受激光功率的影响，导致识别精度下降。
-
-方案 2：采用 K210 自带处理模块
-
-&emsp;K210 是一款基于 RISC-V 架构的系统级芯片，具有双核心 64 位 RISC-V 处理器、图像处理单元以及人工智能支持等功能，是当前市面上主流的图像处理模块。但 K210 的自带摄像头性能同样不够出色，且其 **flash  较小，刷大固件有时候会发生卡顿，甚至死机**，配套开发环境与下位机间的连接通信也不够稳定。
-
-方案 3：以香橙派/ 英伟达 jetson 作为处理器，外接高清摄像头模组
-
-&emsp;相较于 OpenMV、K210 等市面上常见的摄像头处理模块，外接高清 RGB 摄像头模组具有更高的图像分辨率，能够更好的用于图像识别任务。为了让所设计的系统能够更好的适用于不同功率的激光模组、不同光源环境场景， **本设计选用外接高清摄像头模组作为图像获取单元，通过香橙派/ 英伟达 Jetson 嵌入式系统作为图像处理单元。**
-
-#### **主控芯片选择**
-
-方案 1：采用 51 系列型号单片机。
-
-&emsp;51 单片机芯片架构简单，片内外设资源有限多数功能需要外部扩展，**I/O口较少，时钟精度低，运算速度缓慢 ，存储容量小**，仅适合用于各种嵌入式系统和小型项目，并不能较好的满足本设计对于实时性和运动精度的需求。
-
-方案 2：选择 STM32 单片机
-
-&emsp;STM32 是意法半导体推出的 32 位 ARM Cortex-M 内核微控制器系列，具有高性能、低功耗、可靠性强等特点。但 STM32  编程复杂性相对高，**代码复用性差**，在相对较短的设计时间限制内，复杂的程序结构容易影响软硬件调试的稳定性。
-
-方案 3：选择 Esp32 单片机
-
-&emsp;Esp32 是乐鑫自主研发的一系列芯片微控制器。具有低成本、低功耗、丰富外设输入输出接口并能与 Arduino 框架兼容，编程复杂性较低，且 **C++编程使代码复用性更高等特点**， 更适合在**短时间**内开发具有高稳定性 、 实时性的系统。
-
-### **系统设计与实现**
-
-#### **硬件系统设计**
-
-综合分析所设计系统需要实现的功能，所搭建的硬件系统总体框图如图一所示：
+&emsp;Design and build a moving target control and automatic tracking system. The system includes a red spot position control system to simulate the moving target and a green spot position control system to indicate automatic tracking. The system structure and placement are shown in Figure 1(a). Two laser pens are fixed on their respective independent two-dimensional electric control pan-tilt platforms.
 
 <div align = "center">    
-    <img src="/zh/运动目标控制与自动追踪系统/图一系统总体硬件设计框图.png"  align = "middle" />
+    <img src="/en/运动目标控制与自动追踪系统/图1运动目标控制与自动追踪系统结构示意及摆放位置图.png"  align = "middle" />
     <br></br>
-    图一 系统总体硬件设计框图
+    Figure 1 Moving Target Control and Automatic Tracking System Structure and Placement Diagram
 </div>
 
-&emsp;其中供电电源采用 11.3V 电源模组，通过降压、稳压电路实现分压及稳压，所产生的电压分别给单片机处理器、无刷直流电机驱动模块、无刷直流电机以及图像处理器供电。按键模块与单片机 I/O 直接连接，用于实现激光的复位、不同设计功能的快速切换等；香橙派/jetson 用于接收高清摄像头的图像信息，并通过图像处理算法实现对激光颜色、位置的快速识别、判断，并将识别结果传输给单片机处理器；单片机处理器则通过产生不同占空比的 PWM 信号并将其输出给无刷直流电机驱动模块，从而驱动二维云台快速运动，最终实现系统所有功能。
+&emsp;The red laser pen's spot simulates the moving target, which falls on a white screen 1 meter in front, with a spot diameter ≤ 1 cm. The red spot position control system allows the spot to move anywhere within the screen range.
 
-#### **软件系统设计**
+&emsp;The green laser pen's spot is controlled by the green spot position system to automatically track the red spot on the screen, indicating the effect of automatic tracking, with a spot diameter ≤ 1 cm. The green laser pen placement line is shown in Figure 1(b), which is parallel to the screen and located on both sides of the red laser pen, with a distance greater than 0.4m and less than 1m from the red laser pen. The green laser pen can be placed arbitrarily on the two placement lines.
 
-##### **A4靶纸位置识别**
+&emsp;The screen is white, with an effective area greater than 0.6 x 0.6 m². A square with a side length of 0.5m is drawn in the center of the screen with a pencil to mark the screen's edges; the center of the drawn square is the origin, and the origin position is marked with a pencil, with a pencil trace width ≤ 1mm. The red and green spot position control systems must be independent and cannot communicate in any way; the spot diameter is less than 1 cm; there are no electronic components on the screen; the control system cannot use desktop computers or laptops.
 
-&emsp;由于 A4 靶纸外侧边框粘贴了黑色胶带，与白色背景板有较大的颜色对比度，因此，采用 OpenCV 自带的图像分割函数能够较为容易的提取 A4 靶纸黑色胶带的内外侧矩形框四个角点的像素坐标。由于获取的像素坐标并不能够较好的一一对应，因此，通过自主设计的矩形拟合算法对黑色胶带中心路径进行拟合。具体方法为，分别将内外侧矩形的像素坐标记录如下形式：  
+### **Requirements**
 
-$$外侧
-    \begin{cases}
-    (x_{11},y_{11}) \\
-    (x_{12},y_{12}) \\
-    (x_{13},y_{13}) \\
-    (x_{14},y_{14}) \\
-    \tag{1}
-    \end{cases}
-$$
+#### **Basic Requirements**
 
-$$内侧
-    \begin{cases}
-    (x_{21},y_{21}) \\
-    (x_{22},y_{22}) \\
-    (x_{23},y_{23}) \\
-    (x_{24},y_{24}) \\
-    \tag{2}
-    \end{cases}
-$$
+1. Set a reset function for the moving target position. When this function is executed, the red spot can return from any position on the screen to the origin. The error between the center of the spot and the origin ≤ 2 cm.
 
-&emsp;通过两点间的距离计算确定同一位置内外侧相对应的角点坐标，计算公式如下：
+2. Activate the moving target control system. The red spot can move clockwise around the four edges of the screen within 30 seconds, with the distance between the center of the spot and the edge ≤ 2 cm.
+
+3. Use about 1.8 cm wide black electrician tape to stick a rectangle along the four sides of an A4 paper, forming an A4 target paper. Stick this A4 target paper at a designated position on the screen. Activate the moving target control system, and the red spot can move clockwise along the tape within 30 seconds.
+
+4. Stick the above A4 target paper at any rotation angle on the screen at any position. Activate the moving target control system, with the same requirements as 3.
+
+#### **Advanced Requirements**
+
+1. Reset the moving target position, one-key start the automatic tracking system, control the green spot to track the red spot within 2 seconds, and issue continuous sound and light prompts upon successful tracking. The distance between the centers of the two spots should be ≤ 3 cm.
+
+2. Repeat the actions of the basic requirements 3 ~ 4 for the moving target. The green laser pen emitter can be placed at any position on its placement line, simultaneously activate the moving target and automatic tracking system, and the green spot can automatically track the red spot. After 2 seconds of system startup, it should track successfully and issue continuous sound and light prompts.
+
+&emsp;Both the moving target control system and the automatic tracking system need to set a pause key. When the pause key is pressed simultaneously, the red and green spots should immediately brake to measure the distance between the centers of the two spots.
+
+## **Implementation Plan**
+
+### <center>**Abstract**</center>
+
+&emsp;In response to the technical parameter requirements of the selected topic, this design uses the ESP32-S3 microcontroller as the control core of the entire system, selecting hardware devices such as Orange Pi, NVIDIA Jetson, brushless DC motors, two-dimensional pan-tilt, and RGB camera, and combining programming in C++ and python3.6, which can better achieve the design requirements. After testing, regardless of the position of the A4 target paper on the screen, the designed system can effectively recognize the target paper, and the red spot controlled by the pan-tilt can complete a clockwise movement on the target paper within 30 seconds. In addition, by adopting image processing algorithms such as color space conversion, binarization processing, and Gaussian filtering, the designed system can better achieve recognition and motion tracking of red and green spots, and during the tracking process, the center distance of different spots can be kept within 3 cm at all times.
+
+### **Scheme Demonstration**
+
+&emsp;This system mainly demonstrates the selection of motors, image processing modules, and main control chip selection, with other peripheral supporting hardware being conventional design.
+
+#### **Motor Selection**
+
+Option 1: Use servos as the main operating structure components of the pan-tilt
+
+&emsp;Servos are motors with position feedback that can accurately control the motor angle, usually consisting of a DC motor, position sensor, and control circuit. However, during servo control, **the operating speed is relatively slow, and stability and accuracy are relatively poor**. According to the technical indicators of the selected topic and the tentative tests of our team members, using servos cannot meet the high-precision real-time position control requirements of laser points during operation.
+
+Option 2: Use stepper motors as the main operating structure components of the pan-tilt
+
+&emsp;Stepper motors are electrical pulse input motors that can control the rotation angle and speed by changing the number of pulses, with high operating precision. However, **using only stepper motors cannot achieve stable closed-loop control of laser points**, and it is necessary to combine other sensors for testing, which can easily lead to significant cumulative errors. In addition, stepper motors have some disadvantages in terms of motion rate, dynamic response, step loss problems, and electromagnetic interference.
+
+Option 3: Use brushless DC motors as the main operating structure components of the pan-tilt
+
+&emsp;Brushless DC motors can control the rotor position of the motor through an electronic commutator. The permanent magnet on the rotor of the brushless motor and the coils on the stator are alternately excited through the electronic commutator to achieve the rotation of the motor. Compared with the previous two options, brushless DC motors have the characteristics of **high efficiency, high torque, and high speed**. Through control with PWM and PID algorithms, they can better meet the requirements of the selected topic for fast and accurate movement and tracking of laser points. Therefore, this design selects brushless DC motors as the main operating structure components of the two-dimensional pan-tilt.
+
+#### **Image Processing Module**
+
+Option 1: Use the built-in processing module of OpenMV
+
+&emsp;OpenMV is a low-power image processing module based on the Python programming language, equipped with an ARMCortex-M7 processor, with real-time image processing functions such as image denoising, color recognition, QR code and barcode recognition, etc. However, the preliminary test results of our team members on OpenMV show that the **camera performance of this image processing module is average, and it is not sensitive enough to changes in the ambient scene light source**. During the recognition of lasers, it is easily affected by the power of the laser, leading to a decrease in recognition accuracy.
+
+Option 2: Use the built-in processing module of K210
+
+&emsp;K210 is a system-on-chip based on the RISC-V architecture, with dual-core 64-bit RISC-V processors, image processing units, and artificial intelligence support functions, which is a mainstream image processing module on the market. However, the built-in camera performance of K210 is also not outstanding, and its **flash is small, sometimes causing stuttering or even crashing when flashing large firmware**, and the connection communication between the supporting development environment and the lower machine is not stable.
+
+Option 3: Use Orange Pi/NVIDIA Jetson as the processor, and connect a high-definition camera module
+
+&emsp;Compared with the common camera processing modules on the market such as OpenMV and K210, the external high-definition RGB camera module has higher image resolution and can be better used for image recognition tasks. In order for the designed system to better adapt to laser modules of different powers and different light source environmental scenarios, **this design selects an external high-definition camera module as the image acquisition unit, and uses Orange Pi/NVIDIA Jetson embedded systems as the image processing unit.**
+
+#### **Main Control Chip Selection**
+
+Option 1: Use 51 series microcontroller.
+
+&emsp;The 51 microcontroller chip architecture is simple, with limited on-chip peripheral resources and most functions requiring external expansion, **with fewer I/O ports, low clock accuracy, slow operation speed, and small storage capacity**. It is only suitable for various embedded systems and small projects and cannot better meet the requirements of this design for real-time performance and motion accuracy.
+
+Option 2: Choose STM32 microcontroller
+
+&emsp;STM32 is a series of 32-bit ARM Cortex-M core microcontrollers launched by STMicroelectronics, with high performance, low power consumption, and strong reliability. However, the programming complexity of STM32 is relatively high, **with poor code reusability**, and within the relatively short design time limit, the complex program structure can easily affect the stability of software and hardware debugging.
+
+Option 3: Choose Esp32 microcontroller
+
+&emsp;Esp32 is a series of chip microcontrollers independently developed by Espressif. It has the characteristics of low cost, low power consumption, rich peripheral input and output interfaces, and compatibility with the Arduino framework, with lower programming complexity and **higher code reusability with C++ programming**, which is more suitable for developing a system with high stability and real-time performance in a **short time**.
+
+### **System Design and Implementation**
+
+#### **Hardware System Design**
+
+Comprehensively analyze the functions that the designed system needs to achieve, and the overall block diagram of the hardware system built is shown in Figure 1:
+
+<div align = "center">    
+    <img src="/en/运动目标控制与自动追踪系统/图一系统总体硬件设计框图.png"  align = "middle" />
+    <br></br>
+    Figure 1 Overall Hardware Design Block Diagram of the System
+</div>
+
+&emsp;The power supply uses a 11.3V power module, and through the step-down and voltage stabilization circuit, the generated voltage is supplied to the microcontroller processor, brushless DC motor drive module, brushless DC motor, and image processor respectively. The button module is directly connected to the microcontroller I/O, used to realize the reset of the laser, the rapid switching of different design functions, etc.; Orange Pi/Jetson is used to receive the image information of the high-definition camera, and through the image processing algorithm, to quickly recognize and judge the color and position of the laser, and transmit the recognition result to the microcontroller processor; the microcontroller processor then generates PWM signals with different duty cycles and outputs them to the brushless DC motor drive module, thereby driving the two-dimensional pan-tilt to quickly move, and finally realizing all the functions of the system.
+
+#### **Software System Design**
+
+##### **A4 Target Paper Position Recognition**
+
+&emsp;Since the outer frame of the A4 target paper is stuck with black tape, which has a large color contrast with the white background plate, it is relatively easy to extract the pixel coordinates of the four corners of the inner and outer rectangular frames of the black tape of the A4 target paper using the image segmentation function built into OpenCV. Since the obtained pixel coordinates cannot be better matched one by one, the black tape center path is fitted through an independently designed rectangular fitting algorithm. The specific method is to record the pixel coordinates of the inner and outer rectangles in the following form:
+
+$$Outer     \begin{cases}     (x_{11},y_{11}) \\     (x_{12},y_{12}) \\     (x_{13},y_{13}) \\     (x_{14},y_{14}) \\     \tag{1}     \end{cases} $$
+
+$$Inner     \begin{cases}     (x_{21},y_{21}) \\     (x_{22},y_{22}) \\     (x_{23},y_{23}) \\     (x_{24},y_{24}) \\     \tag{2}     \end{cases} $$
+
+&emsp;Determine the corresponding corner coordinates of the inner and outer sides at the same position through the distance calculation between two points, the calculation formula is as follows:
 
 $$ \sqrt{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}} \tag{3}$$
 
-&emsp;根据内外侧矩形四个角点排列结果，计算出黑色胶带中心路径的矩形角点坐标，并通过像素间的直线连接绘制出完整的矩形路径，并反向遍历该矩形框上的所有像素坐标，为下位机提供完整的运行路径，算法流程框图如图二所示。
+&emsp;According to the arrangement result of the four corner points of the inner and outer rectangles, calculate the rectangular corner coordinates of the black tape center path, and draw a complete rectangular path through the straight line connection between pixels, and traverse all pixel coordinates on the rectangular frame in reverse, providing a complete running path for the lower machine, the algorithm flow block diagram is shown in Figure 2.
 
 <div align = "center">    
-    <img src="/zh/运动目标控制与自动追踪系统/图二A4靶纸位置识别算法.png"  align = "middle" />
+    <img src="/en/运动目标控制与自动追踪系统/图二A4靶纸位置识别算法.png"  align = "middle" />
     <br></br>
-    图二 A4 靶纸位置识别算法
+    Figure 2 A4 Target Paper Position Recognition Algorithm
 </div>
 
-##### **激光追踪**
+##### **Laser Tracking**
 
-&emsp;本设计的激光追踪功能主要通过图像识别算法实现，在高清摄像头捕获到实时视频后，对实时视频进行抽帧，获取相邻时间的图像数据，为了更好的识别不同的激光颜色，首先将抽出的图像帧由 RGB 颜色空间转换至 HSV 颜色空间，并应用高斯模糊和中值滤波，降低图像噪点，平滑图像边缘。接着，使用形态学操作（闭运算、开运算和膨胀）进一步去除噪点，增加图像对于激光和背景的对比度。最后，通过阈值化将图像转换为二进制图像，并找到满足一定面积范围的轮廓，算出激光的质心，处理流程如图三所示。
+&emsp;The laser tracking function of this design is mainly realized through the image recognition algorithm. After the high-definition camera captures the real-time video, the real-time video is sampled to obtain image data at adjacent times. In order to better recognize different laser colors, the extracted image frames are first converted from the RGB color space to the HSV color space, and Gaussian blur and median filtering are applied to reduce image noise and smooth image edges. Then, morphological operations (closing, opening, and dilation) are used to further remove noise and increase the contrast of the image for lasers and the background. Finally, the image is converted into a binary image through thresholding, and the contours that meet a certain area range are found, and the centroid of the laser is calculated, the processing flow is shown in Figure 3.
 
 <div align = "center">    
-    <img src="/zh/运动目标控制与自动追踪系统/图三激光追踪算法.png"  align = "middle" />
+    <img src="/en/运动目标控制与自动追踪系统/图三激光追踪算法.png"  align = "middle" />
     <br></br>
-图三 激光追踪算法
+    Figure 3 Laser Tracking Algorithm
 </div>
 
-### **测试方案及测试结果分析**
+### **Test Plan and Test Result Analysis**
 
-#### **测试方法**
+#### **Test Method**
 
-&emsp;根据所选题目的测试指标要求，分别测试基本要求部分及发挥部分的光斑中心距原点距离、光斑中心距边线距离、光斑脱离胶带距离以及两光斑中心距离，所有测试反复进行 9 次并手动测量误差结果。
+&emsp;According to the test indicator requirements of the selected topic, test the distance between the center of the spot and the origin, the distance between the center of the spot and the edge, the distance the spot deviates from the tape, and the distance between the centers of the two spots in the basic requirements part and the advanced part, all tests are repeated 9 times and the error results are manually measured.
 
-#### 测试结果
+#### **Test Results**
 
-&emsp;基本要求测试与发挥部分测试分别如下：
+&emsp;The basic requirements test and advanced part test are as follows:
 
 <div align = "center">    
-    <img src="/zh/运动目标控制与自动追踪系统/基本要求测试与发挥部分测试.png"  align = "middle" />
+    <img src="/en/运动目标控制与自动追踪系统/基本要求测试与发挥部分测试.png"  align = "middle" />
     <br></br>
-基本要求测试与发挥部分测试
+    Basic Requirements Test and Advanced Part Test
 </div>
 
-&emsp;根据多次实际试验结果表明，所设计的系统无论在基本测试部分还是发挥部分均有较好的测试效果，所产生的试验误差均在可接受范围以内，系统具有较好的实时测试精度。
+&emsp;According to the results of multiple actual tests, the designed system has good test effects both in the basic test part and the advanced part, and the generated test errors are within the acceptable range, the system has good real-time test accuracy.
 
-#### **仍然存在的问题**
+#### **Existing Problems**
 
-&emsp;需要说明的是，由于采用按键暂停测试，测试结果的实时性与实际运行效果有一定时间差，因此，所获取的结果可能会略微小于实际测试。由于开发时间有限，本系统在对于电机的控制上，仅采用了角度闭环控制，并未添加速度闭环控制。因此，在角度的控制准确度上要显著高于速度控制。此外，本设计所使用的香橙派及 Jetson 成本较高，后续完善会考虑低成本方案。
+&emsp;It should be noted that due to the use of the pause button test, there is a certain time difference between the real-time performance of the test results and the actual running effect, so the results obtained may be slightly less than the actual test. Due to the limited development time, the control of the motors in this system only adopts angle closed-loop control and does not add speed closed-loop control. Therefore, the control accuracy of the angle is significantly higher than that of the speed. In addition, the Orange Pi and Jetson used in this design have high costs, and subsequent improvements will consider low-cost solutions.
 
-#### **总结**
+#### **Conclusion**
 
-&emsp;本设计运动目标控制与自动追踪系统以 ESP32-S3 单片机为整个系 统的控制核心，通过外接高清摄像头作为图像获取设备，采用香橙派 /jetson 对图像进行实时处理，并自主设计了靶纸中心运行路径拟合算法，能够较为准确的实现所选题目的主要功能。由于开发时间有限，本系统在对于电机的控制上，仅采用了角度闭环控制，并未添加速度闭环控制，后续优化会重点考虑低成本双闭环控制方案，从而提升系统的搭建成本及运行精度。
+&emsp;This design of the moving target control and automatic tracking system uses the ESP32-S3 microcontroller as the control core of the entire system, through the external high-definition camera as the image acquisition equipment, using Orange Pi/Jetson for real-time image processing, and independently designing the target paper center running path fitting algorithm, which can more accurately achieve the main functions of the selected topic. Due to the limited development time, the control of the motors in this system only adopts angle closed-loop control and does not add speed closed-loop control, subsequent optimizations will focus on considering low-cost dual closed-loop control solutions, thereby improving the system's construction cost and running accuracy.
