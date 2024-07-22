@@ -1,159 +1,139 @@
 ---
-title: 非接触物体尺寸形态测量
+title: Non-Contact Object Size and Shape Measurement
 ---
-## **项目任务和要求**
 
-### **任务**
+## **Project Tasks and Requirements**
 
-&emsp;设计并制作一个非接触式物体形状和尺寸自动测量装置，装置的布置图如
-图 1 所示，测量装置放置在图中所示的测量装置区内，被测目标放置在图中被测
-目标放置区内，装置能测量被测目标的形状、尺寸、测量头中心点与被测目标之
-间的距离等参数，并用激光束指示出被测目标的中心位置。背景板竖立放置在目
-标后 5cm 处，图 2 为目标和背景板放置示意图。
+### **Task**
 
-<div align = "center">
-    单位：mm
+&emsp;Design and produce a non-contact automatic measurement device for object shape and size. The layout of the device is shown in Figure 1. The measurement device is placed in the designated measurement area, and the target to be measured is placed in the target placement area. The device can measure the shape, size, and distance between the center point of the measurement head and the target, and use a laser beam to indicate the center position of the target. The background board is placed vertically 5cm behind the target, as shown in Figure 2.
+
+<div align="center">
+    Unit: mm
     <br></br>    
-    <img src="/zh/非接触物体尺寸形态测量/图1测试场景布置图.png"  align = "middle" />
+    <img src="/zh/非接触物体尺寸形态测量/图1测试场景布置图.png" align="middle" />
     <br></br>
-    图1 测试场景布置图
-    <img src="/zh/非接触物体尺寸形态测量/图2目标板和背景板放置示意图.png"  align = "middle" />
+    Figure 1: Test Scene Layout Diagram
+    <img src="/zh/非接触物体尺寸形态测量/图2目标板和背景板放置示意图.png" align="middle" />
     <br></br>
-    图2 目标板和背景板放置示意图
+    Figure 2: Target Board and Background Board Placement Diagram
 </div>
 
-### **要求**
+### **Requirements**
 
-1. 选择某规则形状的平面目标，放在被测目标放置区的中心线位置
-上，按测量键后开始测量，完成测量后，在装置上显示出该目标物体边长（如
-果目标选择的是圆形目标，显示出直径）、几何形状和目标与测量头的距离，
-整个测量和指示过程要求总用时不超过 2 分钟。
+1. Select a planar target of a regular shape and place it on the centerline of the target placement area. Press the measurement button to start the measurement. After completion, display the target's side length (or diameter if the target is circular), geometric shape, and distance from the measurement head on the device. The entire measurement and indication process must not exceed 2 minutes.
 
-2. 更换目标板，在摆放区内中心线上放置目标和背景板，显示距离、
-形状、尺寸（边长），要求测量用时不超过 2 分钟。
+2. Replace the target board, place the target and background board on the centerline of the placement area, and display the distance, shape, and size (side length). The measurement time must not exceed 2 minutes.
 
-3. 自动寻找目标测量：测量头处于中心线方向（0º）， 目标摆放在目标
-放置区内任选位置；按测试键后，装置自动寻找目标，测量并显示距离、形状、
-尺寸、用激光笔指示几何中心，用时不超过 3 分钟，越短越好。
+3. Automatic target search and measurement: The measurement head is aligned with the centerline (0º), and the target is placed in the target placement area at any selected position. After pressing the test button, the device automatically searches for the target, measures and displays the distance, shape, size, and uses a laser pointer to indicate the geometric center. The time must not exceed 3 minutes, the shorter the better.
 
-4. 立体目标测量：随机抽取篮球、排球、足球中一个，重复 3 测
-量，判断球类品种、测量与球表面最近距离。用时不超过 2 分钟。
+4. Three-dimensional target measurement: Randomly select one from basketball, volleyball, and football, repeat the measurement three times, determine the type of ball, and measure the closest distance to the ball surface. The time must not exceed 2 minutes.
 
-## **实现方案**
+## **Implementation Plan**
 
-### <center>**摘要**</center>
+### <center>**Abstract**</center>
 
-&emsp;本设计的非接触式物体形状和尺寸自动测量装置以ESP32-S3单片机为整个系统的控制核心，辅以相关的外围电路，设计出可以自动测量被测目标的形状、尺寸、测量头中心点与被测目标之间的距离等参数，并用激光束指示出被测目标的中心位置。该系统由按键、电机驱动模块、电机、通信模块、OLED显示器、电源模块、识别模块等构成。在硬件电路上，使用摄像头识别被测目标的形状、尺寸、测量头中心点与被测目标之间的距离等参数，ESP32-S3单片机检测实时数据，并在显示屏上显示出目标物体边长（如果目标选择的是圆形，显示出直径）、几何形状和目标与测量头的距离。在软件方面，使用C++编程、python3.6，通过对单片机程序实现对目标物体边长、几何形状、目标与测量头的距离的测量。
+&emsp;This non-contact automatic measurement device for object shape and size is designed with the ESP32-S3 microcontroller as the control core of the entire system, supplemented by related peripheral circuits. It can automatically measure the shape, size, and distance between the center point of the measurement head and the target, and use a laser beam to indicate the center position of the target. The system consists of buttons, motor drive module, motor, communication module, OLED display, power module, and recognition module. In the hardware circuit, a camera is used to identify the shape, size, and distance parameters of the target, the ESP32-S3 microcontroller detects real-time data, and displays the target's side length (or diameter if the target is circular), geometric shape, and distance from the measurement head on the display. In the software aspect, C++ programming and python3.6 are used to implement the measurement of the target's side length, geometric shape, and distance from the measurement head through the microcontroller program.
 
-### **方案论证**
+### **Scheme Demonstration**
 
-#### **降压选择**
+#### **Voltage Reduction Selection**
 
-**方案一** ：采用**线性稳压电源**（LDO）。低压差线性稳压器的突出优点是具有最低的
-成本，最低的噪声和最低的静态电流。它的外围器件也很少，通常只有一两个旁路电容。但线性电源的效率低，发热量大，需要更大的散热面积，只适用于低压差转换和一些要求电源电压稳定的场合，诸如供给单片机等器件作为电源。
+**Option 1**: Use **Linear Regulator Power Supply** (LDO). The outstanding advantages of low dropout linear regulators are the lowest cost, lowest noise, and lowest quiescent current. Its peripheral devices are also very few, usually only one or two bypass capacitors. However, the efficiency of linear power supplies is low, and the heat generation is large, requiring a larger heat dissipation area, and is only suitable for low dropout conversion and some occasions requiring a stable power supply voltage, such as supplying power to microcontrollers and other devices.
 
-**方案二** ：采用**开关电源**。DC-DC包括boost（升压）、buck（降压）、Boost/buck（升/降压）和反相结构，具有高效率、高输出电流、低静态电流等特点。相比于LDO，电源开关体积小，适用于高的压差转化。故本系统采用电源开关。
+**Option 2**: Use **Switching Power Supply**. DC-DC includes boost (step-up), buck (step-down), Boost/buck (step-up/step-down), and inverting structures, with high efficiency, high output current, and low quiescent current. Compared to LDO, the power switch is small in size and suitable for high dropout conversion. Therefore, the switching power supply is used in this system.
 
-#### **图像处理模块**
+#### **Image Processing Module**
 
-**方案一** ：采用**OpenMv**。OpenMV是一款专注于机器视觉的开源模块，它基于CPython编程语言，提供了丰富的图像处理和计算机视觉功能。OpenMv拥有人脸识别、拍照、视屏录制等功能，但它做不了复杂的算法，运行时间不能过长。
+**Option 1**: Use **OpenMv**. OpenMV is an open-source module focused on machine vision, based on the CPython programming language, providing rich image processing and computer vision functions. OpenMv has functions such as face recognition, photo taking, and video recording, but it cannot handle complex algorithms and cannot run for too long.
 
-**方案二** ：采用**K210**。K210芯片可以用于各种嵌入式人工智能应用，可以实现实时图像处理、目标检测、人脸识别、语音识别和自然语言处理等功能。K210芯片的主要优势是低功耗和较小的体积，但在在计算能力和图形处理能力上稍逊一筹。
+**Option 2**: Use **K210**. The K210 chip can be used for various embedded artificial intelligence applications, capable of real-time image processing, object detection, face recognition, voice recognition, and natural language processing. The main advantages of the K210 chip are low power consumption and small size, but it is slightly inferior in computational power and graphics processing capabilities.
 
-**方案三** ： 采用**Jetson**。Jetson平台是基于NVIDIA的GPU架构，提供了丰富的软件支持和开发工具，使开发者可以更轻松地进行应用开发和优化。相比于OpenMv和K210，Jetson拥有更强大的计算能力和图形处理能力，故本系统采用Jetson。
+**Option 3**: Use **Jetson**. The Jetson platform is based on NVIDIA's GPU architecture, providing rich software support and development tools, making it easier for developers to develop and optimize applications. Compared to OpenMv and K210, Jetson has stronger computational power and graphics processing capabilities, so Jetson is used in this system.
 
-#### **电机选择**
-**方案一** ：采用舵机。舵机是一种具有位置反馈的电机，它可以精确控制电机角
-度。舵机通常由一个直流电机、一个位置传感器和一个控制电路组成，广泛应用于机器人、航模、自动化设备等领域，可以实现精确的位置控制。    
+#### **Motor Selection**
 
- **方案二** ：采用无刷电机。无刷电机它通过电子换向器来控制电机的转子位置。无刷电机通常由一个转子和一个定子组成，转子上的永磁体和定子上的线圈之间通过电子换向器进行交替激励，从而实现电机的转动，它具有高效率、高转矩和高速度的特点。总体来说，舵
-机更适用于精确的位置控制，无刷电机更适用于高效率、高转矩和高速度的应用，故本系统采用无刷电机。
+**Option 1**: Use **Servo Motor**. A servo motor is a motor with position feedback, which can accurately control the motor angle. Servo motors are usually composed of a DC motor, a position sensor, and a control circuit, widely used in robotics, model aircraft, automation equipment, and other fields, capable of precise position control.
 
-#### **电机控制选择**
+**Option 2**: Use **Brushless Motor**. A brushless motor controls the rotor position through an electronic commutator. Brushless motors usually consist of a rotor and a stator, with permanent magnets on the rotor and coils on the stator being alternately energized through the electronic commutator to achieve motor rotation. It has the characteristics of high efficiency, high torque, and high speed. Overall, servo motors are more suitable for precise position control, while brushless motors are more suitable for applications requiring high efficiency, high torque, and high speed. Therefore, brushless motors are used in this system.
 
-**方案一** ：采用**六步换相位**。六步换相位是一种简单的电机控制方法，它通过依
-次切换电机的三个相位来控制电机的转动，适用于一些简单的电机控制应用。
+#### **Motor Control Selection**
 
-**方案二** ：采用**SVPWM**。SVPWM是一种高级的电机控制方法，它通过调整电机的电压和频率来控制电机的转速和转矩，具有较高的控制精度和效率，适用于一些对电机控制性能要求较高的应用，故本系统采用SVPWM实现对电机的控制。
+**Option 1**: Use **Six-Step Phase Change**. Six-step phase change is a simple motor control method that controls the rotation of the motor by sequentially switching the three phases of the motor, suitable for some simple motor control applications.
 
-### **系统设计与实现**
+**Option 2**: Use **SVPWM**. SVPWM is an advanced motor control method that controls the motor's speed and torque by adjusting the motor's voltage and frequency, with high control accuracy and efficiency, suitable for applications with high requirements for motor control performance. Therefore, SVPWM is used in this system to control the motor.
 
-系统的总体构成框图如图1。
+### **System Design and Implementation**
 
-<div align = "center">    
-    <img src="/zh/非接触物体尺寸形态测量/图1.png"  align = "middle" />
+The overall composition block diagram of the system is shown in Figure 1.
+
+<div align="center">    
+    <img src="/zh/非接触物体尺寸形态测量/图1.png" align="middle" />
     <br></br>
-    图1
+    Figure 1
 </div>
 
-#### **降压电路设计**
-&emsp;使用开关电源进行降压是一种常见的电源转换方式，可以将高电压转换
-为低电压供应给负载。降压型开关电源通常包括输入滤波电路、开关管、变压器、整流电路、输出滤波电路和反馈控制电路等组成。降压型开关电源的基本工作原理是通过开关管的开关动作，将输入电压切换成高频脉冲信号，然后通过变压器和整流电路将其转换为稳定的低电压输出，由此将电源的12V转变为5V。
+#### **Voltage Reduction Circuit Design**
 
-#### **控制无刷电机设计**
-&emsp;首先连接电机，将无刷电机的电源和控制信号线连接到ESP32的相应引
-脚。然后在ESP32的代码中配置GPIO引脚的工作模式和电平，使用SVPWM
-来实现无刷电机的控制，最后通过电机控制库提供的函数来控制电机的转动。
+&emsp;Using a switching power supply for voltage reduction is a common power conversion method that can convert high voltage to low voltage to supply power to the load. The step-down switching power supply usually includes an input filter circuit, a switch tube, a transformer, a rectifier circuit, an output filter circuit, and a feedback control circuit. The basic working principle of the step-down switching power supply is to switch the input voltage into a high-frequency pulse signal through the switching action of the switch tube, and then convert it into a stable low-voltage output through the transformer and rectifier circuit, thus converting the 12V power supply to 5V.
 
-#### **激光测距设计**
-&emsp;激光测距是一种利用激光技术进行距离测量的方法。它通过发射一束激
-光脉冲，并测量激光脉冲从发射到接收的时间来计算距离。激光测距仪通常
-由激光发射器、接收器、时钟和计算器等组成。激光发射器发射激光脉冲，
-接收器接收反射的激光脉冲，并将接收到的信号转换为电信号。时钟用于测
-量激光脉冲的时间，计算器用于计算距离。
+#### **Brushless Motor Control Design**
 
-#### **图像处理算法设计**
-&emsp;用模板匹配和圆霍夫变换，以及两者相结合来实现对圆形、长方形、三角
-形的判断和识别。
-圆霍夫变换用于检测图像中的圆形。圆霍夫变换通过在图像中搜索圆形和直线的参数空间，来寻找与输入图像中的圆形和直线相匹配的参数。在OpenCV库中，可以使用HoughCircles函数来实现圆霍夫变换算法。
-模板匹配和圆霍夫变换相结合来实现对三角形和长方形的检测。首先，可以使用模板匹配来检测和识别图像中的三角形和长方形的边缘。然后，可以使用圆霍夫变换来检测和识别图像中的圆形和直线，从而进一步确定三角形和长方形的位置和形状。
+&emsp;First, connect the motor, connect the power and control signal lines of the brushless motor to the corresponding pins of the ESP32. Then configure the GPIO pin working mode and level in the ESP32 code, use SVPWM to achieve brushless motor control, and finally control the motor's rotation through the functions provided by the motor control library.
 
-#### **通信模块设计**
-&emsp;通信使用wifi通过tcp协议是一种常见的网络通信方式。tcp协议是一种可靠的传输协议，它能够保证数据的可靠传输，确保数据不会丢失或损坏。而使用 wifi作为通信媒介，可以提供高速的数据传输速度和稳定的连接质量。使用json数据格式化传送数据可以方便数据解析。json是一种轻量级的数据交换格式，它具有良好的可读性和可扩展性，可以方便地进行数据解析和处理。在网络通信中，使用json格式化数据可以减少数据传输的大小，提高数据传输的效率。
+#### **Laser Rangefinder Design**
 
-### **测试方案及测试结果分析**
+&emsp;Laser ranging is a method of distance measurement using laser technology. It calculates the distance by emitting a laser pulse and measuring the time from emission to reception of the laser pulse. Laser rangefinders usually consist of a laser emitter, a receiver, a clock, and a calculator. The laser emitter emits a laser pulse, the receiver receives the reflected laser pulse and converts the received signal into an electrical signal. The clock is used to measure the time of the laser pulse, and the calculator is used to calculate the distance.
 
-#### **测试仪器**
+#### **Image Processing Algorithm Design**
 
-示波器、电压表、可调电源、数字发生器、卷尺。
+&emsp;Use template matching and circular Hough transform, as well as their combination, to achieve judgment and recognition of circles, rectangles, and triangles.
+The circular Hough transform is used to detect circles in the image. The circular Hough transform searches for parameters in the parameter space of circles and lines in the image to find parameters that match the circles and lines in the input image. In the OpenCV library, the HoughCircles function can be used to implement the circular Hough transform algorithm.
+Template matching and circular Hough transform are combined to detect triangles and rectangles. First, template matching can be used to detect and recognize the edges of triangles and rectangles in the image. Then, the circular Hough transform can be used to detect and recognize circles and lines in the image, further determining the position and shape of triangles and rectangles.
 
-#### **测试方法**
+#### **Communication Module Design**
 
-##### 距离测试
+&emsp;Communication using WiFi through the TCP protocol is a common network communication method. The TCP protocol is a reliable transmission protocol that can ensure the reliable transmission of data, ensuring that data is not lost or damaged. Using WiFi as the communication medium can provide high-speed data transmission rates and stable connection quality. Using JSON data formatting to transmit data can facilitate data parsing. JSON is a lightweight data exchange format with good readability and scalability, which can facilitate data parsing and processing. In network communication, using JSON to format data can reduce the size of data transmission and improve the efficiency of data transmission.
 
-&emsp;使用单目相机测距。图中f是摄像头的焦距，c是镜头光心。物体发出的
-光经过相机的光心，然后成像于图像传感器或者也可以说是像平面上，如果设物体所在平面与相机平面的距离为d，物体实际高度为H，在传感器上的高度为h，H一定要是已知的，我们才能求得距离d。由相似三角形得到他们的关系：d/H=f/h。单目相机测距原理图如图2所示
+### **Test Plan and Analysis of Test Results**
 
-<div align = "center">    
-    <img src="/zh/非接触物体尺寸形态测量/图2.png"  align = "middle" />
+#### **Test Instruments**
+
+Oscilloscope, voltmeter, adjustable power supply, digital generator, tape measure.
+
+#### **Test Methods**
+
+##### Distance Test
+
+&emsp;Use monocular camera ranging. In the figure, f is the focal length of the camera, and c is the optical center of the lens. The light emitted by the object passes through the optical center of the camera and then forms an image on the image sensor or, in other words, on the image plane. If the distance between the object plane and the camera plane is d, the actual height of the object is H, and the height on the sensor is h, H must be known to obtain the distance d. The relationship between them is obtained from the similarity of triangles: d/H=f/h. The principle diagram of monocular camera ranging is shown in Figure 2.
+
+<div align="center">    
+    <img src="/zh/非接触物体尺寸形态测量/图2.png" align="middle" />
     <br></br>
-    图2
+    Figure 2
 </div>
 
-##### 电路测试
+##### Circuit Test
 
-&emsp;在测试电路时，使用示波器观察和分析电路中的信号波形，显示电压和电流随时间变化的波形图，帮助我们了解电路的工作状态和性能。使用电压表测量电路中的电压。使用可调电源提供可调的电压和电流，因为可调电源通常具有可调的输出电压和电流限制，并具有过载和短路保护功能，所以可以用于测试和供电电路中的各种元件和设备。使用数字发生器产生可调的信号。数字发生器通常具有多个输出通道和可调的输出参数，可以用于测试和调试电路中的各种信号源和信号处理器。
+&emsp;When testing the circuit, use an oscilloscope to observe and analyze the signal waveforms in the circuit, displaying the waveform diagram of voltage and current over time, helping us understand the working state and performance of the circuit. Use a voltmeter to measure the voltage in the circuit. Use an adjustable power supply to provide adjustable voltage and current, as adjustable power supplies usually have adjustable output voltage and current limits and have overload and short circuit protection functions, so they can be used to test and power various components and devices in the circuit. Use a digital generator to generate adjustable signals. Digital generators usually have multiple output channels and adjustable output parameters, which can be used to test and debug various signal sources and signal processors in the circuit.
 
-#### **测试结果**
-&emsp;在设计的自动测量装置各项指标都满足的情况下对各项要求进行多次测
-试。选择某规则形状的平面目标，放在被测目标放置区的中心线位置上，按
-测量按键后开始测量，同时秒表开始记时，测量结束后，用直尺测量实际值，
-与测量值进行对比，观察误差值以及测量时间是否超过规定时间。如图3所
-示
+#### **Test Results**
 
-||测量距离（mm）|测量边长或半径(mm)|实际边长(mm)|
+&emsp;Under the condition that all indicators of the designed automatic measurement device meet the requirements, multiple tests were conducted on each requirement. Select a planar target of a regular shape and place it on the centerline of the target placement area. Press the measurement button to start the measurement, and the stopwatch starts timing simultaneously. After the measurement is completed, measure the actual value with a ruler, compare it with the measured value, observe the error value, and whether the measurement time exceeds the specified time. As shown in Figure 3.
+
+||Measured Distance (mm)|Measured Side Length or Radius (mm)|Actual Side Length (mm)|
 |:----:|:----:|:----:|:----:|
-|长方形|2801|190/110|498/293|
+|Rectangle|2801|190/110|498/293|
 ||2753|193/110|408/293|
-|三角形|2283|228/227/231|500/500/500|
+|Triangle|2283|228/227/231|500/500/500|
 ||2513|219/208/208|500/500/500|
-|圆形|2301|112|250|
+|Circle|2301|112|250|
 ||2787|97|250|
 
-#### **误差原因**
+#### **Error Reasons**
 
-&emsp;实验中使用的仪器可能存在固有的误差，可能由于仪器的不完美性能、校准不准确或老化等原因导致。实验环境的变化可能会对实验结果产生影响。在进行实验时可能会出现一些误差，例如读数误差、仪器放置不准确等，可能是由于技术熟练程度、操作不规范或疏忽等原因导致的。实验设计的不完善或者假设的不准确性可能导致误差。例如，忽略了一些影响因素、样本数量不足等。
+&emsp;The instruments used in the experiment may have inherent errors, possibly due to imperfect performance of the instruments, inaccurate calibration, or aging. Changes in the experimental environment may affect the experimental results. Errors may occur during the experiment, such as reading errors, inaccurate instrument placement, etc., which may be due to technical proficiency, non-standard operation, or negligence. Imperfections in the experimental design or inaccuracies in the assumptions may lead to errors. For example, ignoring some influencing factors, insufficient sample size, etc.
 
-### **总结**
+### **Conclusion**
 
-&emsp;本系统以esp32为控制核心，设计出可以自动测量被测目标的形状、尺寸、测量头中心点与被测目标之间的距离等参数，并用激光束指示出被测目标的中心位置。本系统较好地完成了题目基本部分及发挥部分的所有要求，系统整体性能良好，但由于时间关系，并未较好的实现用激光笔指示几何中心，系统有待于进一步改进和完善。
+&emsp;This system uses the ESP32 as the control core to design an automatic measurement device that can measure the shape, size, and distance between the center point of the measurement head and the target, and use a laser beam to indicate the center position of the target. This system has satisfactorily completed all the basic and advanced requirements of the topic, with overall good performance. However, due to time constraints, the geometric center indication using a laser pointer has not been well realized, and the system needs further improvement and refinement.

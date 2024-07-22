@@ -157,7 +157,7 @@ motors and controlling it using the FOC algorithm.</li>
 <h2 id="software" tabindex="-1"><a class="header-anchor" href="#software"><span>Software:</span></a></h2>
 <p>Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW,
 Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell,
-Xftp</p>
+Xftp, Quartus II</p>
 <h2 id="language" tabindex="-1"><a class="header-anchor" href="#language"><span>Language:</span></a></h2>
 <p>TOEIC 690</p>
 </div></template>

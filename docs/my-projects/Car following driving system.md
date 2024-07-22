@@ -1,283 +1,199 @@
 ---
-title: 小车跟随行驶系统
+title: Car Following Driving System
 ---
-## **项目要求**
+## **Project Requirements**
 
-### **任务**
-&emsp;设计一套小车跟随行驶系统，采用 TI 的 MCU，由一辆领头小车和一辆跟随
-小车组成，要求小车具有循迹功能，且速度在 0.3 ~ 1m/s 可调，能在指定路径上
-完成行驶操作，行驶场地的路径如图 1 所示。其中，路径上的 A 点为领头小车
-每次行驶的起始点和终点。当小车完成一次行驶到达终点，领头小车和跟随小车
-要发出声音提示。领头小车和跟随小车既可以沿着 ABFDE 圆角矩形（ 简称为
-内圈 ）路径行驶，也可以沿着 ABCDE 的圆角矩形（ 简称为外圈 ）路径行驶。
-当行驶在内圈 BFD 段时，小车要发出灯光指示。此外，在测试过程中，可以在
-路径上 E 点所在边的直线区域，由测试专家指定位置放上“等停指示”标识（见图
-1 左侧），指示领头小车在此处须停车，等待 5 秒后再继续行驶。
+### **Task**
+&emsp;Design a car following driving system using TI's MCU, consisting of a leading car and a following car. The cars must have line-following functionality with adjustable speeds between 0.3 ~ 1m/s and be able to complete driving operations on a specified path. The path of the driving area is shown in Figure 1. Point A on the path is the starting and ending point for each trip of the leading car. When the cars complete a trip and reach the end, both the leading and following cars must emit an audible alert. The leading and following cars can either travel along the rounded rectangular path ABFDE (referred to as the inner loop) or the rounded rectangular path ABCDE (referred to as the outer loop). When traveling on the inner loop BFD segment, the cars must emit a light indication. Additionally, during testing, a "stop and wait" indicator can be placed at a designated location on the straight section where point E is located (see the left side of Figure 1), instructing the leading car to stop at this point, wait for 5 seconds, and then continue driving.
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图1小车跟随行驶场地示意图.png"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图1小车跟随行驶场地示意图.png" align="middle" />
     <br></br>
-    图1 小车跟随行驶场地示意图
+    Figure 1 Schematic Diagram of the Car Following Driving Area
 </div>
 
-### **要求**
+### **Requirements**
 
-1. 将领头小车放在路径的起始位置 A 点，跟随小车放在其后 20cm 处，设
-定领头小车速度为 0.3m/s，沿着外圈路径行驶一圈停止，要求：
-- 领头小车的平均速度误差不大于 10%；
-- 跟随小车能跟随领头小车行驶，全程不能发生小车碰撞；
-- 完成一圈行驶后领头小车到达 A 点处停车，跟随小车应及时停止，停止
-时间差不超过 1s，且与领头小车的间距为 20cm，误差不大于 6cm。
+1. Place the leading car at the starting position A and the following car 20cm behind it. Set the leading car's speed to 0.3m/s and drive it along the outer loop path for one lap and stop. Requirements:
+- The average speed error of the leading car should not exceed 10%;
+- The following car must follow the leading car without collision;
+- After completing one lap, the leading car stops at point A, and the following car should stop promptly with a time difference of no more than 1s and a distance of 20cm from the leading car, with an error not exceeding 6cm.
 
-2. 将领头小车放在路径轨迹的起始位置 A 点，跟随小车放在路径上 E 点所在
-边的直线区域，由测试专家指定的位置，设定领头小车速度为 0.5m/s，沿着外圈
-路径行驶两圈停止，要求：
-- 领头小车的平均速度误差不大于 10%；
-- 跟随小车能快速追上领头小车，然后按 20cm 间距跟随领头小车行驶，
-全程不能发生小车碰撞：
-- 完成两圈行驶后领头小车达到 A 点停止，跟随小车应及时停止，两车停
-止的时间差不超过 1s，且与领头小车的间距为 20cm，误差不大于 6cm。
+2. Place the leading car at the starting position A and the following car at a designated location on the straight section where point E is located. Set the leading car's speed to 0.5m/s and drive it along the outer loop path for two laps and stop. Requirements:
+- The average speed error of the leading car should not exceed 10%;
+- The following car must quickly catch up with the leading car and then follow it at a distance of 20cm without collision;
+- After completing two laps, the leading car stops at point A, and the following car should stop promptly with a time difference of no more than 1s and a distance of 20cm from the leading car, with an error not exceeding 6cm.
 
-3. 将领头小车放在路径的起始位置 A 点，跟随小车放在其后 20cm 处，领
-头小车和跟随小车连续完成三圈路径的行驶。第一圈领头小车和跟随小车都沿着
-外圈路径行驶。第二圈领头小车沿着外圈路径行驶，跟随小车沿着内圈路径行驶，
-实现超车领跑。第三圈跟随小车沿着外圈路径行驶，领头小车沿着内圈路径行驶，
-实现反超和再次领跑。要求：
-- 全程两个小车行驶平稳，顺利完成两次超车，且不能发生小车碰撞；
-- 完成三圈行驶后领头小车到达 A 点停止，跟随小车应及时停止，两车停
-止的时间差不超过 1s，且与领头小车的间距为 20cm，误差不大于 6cm；
-- 小车行驶速度可自主设定，但不得低于 0.3m/s，且完成所规定的三圈轨
-迹行驶所需时间越短越好。
+3. Place the leading car at the starting position A and the following car 20cm behind it. The leading and following cars complete three laps continuously. The first lap, both cars travel along the outer loop path. The second lap, the leading car travels along the outer loop path, and the following car travels along the inner loop path, achieving overtaking. The third lap, the following car travels along the outer loop path, and the leading car travels along the inner loop path, achieving a counter-overtake and leading again. Requirements:
+- Both cars must travel smoothly, successfully complete two overtakes without collision;
+- After completing three laps, the leading car stops at point A, and the following car should stop promptly with a time difference of no more than 1s and a distance of 20cm from the leading car, with an error not exceeding 6cm;
+- The car speed can be set autonomously but must not be lower than 0.3m/s, and the time required to complete the specified three-lap trajectory should be as short as possible.
 
-4. 由测试专家在路径的 E 点所在边的直线区域指定位置，放上“等停指示”
-标识。然后，将领头小车放在路径的起始位置 A 点，跟随小车放在其后 20cm 处，
-设定领头小车速度为 1m/s，沿着外圈路径行驶一圈，行驶中两小车不得发生碰
-闯。要求：
-- 领头小车的平均速度误差不大于 10%；
-- 领头小车达到“等停指示”点停车，停车位置准确，误差不大于 5cm；
-- 在“等停指示”处停车时间为 5s，误差不超过 1s。
+4. Place a "stop and wait" indicator at a designated location on the straight section where point E is located. Then, place the leading car at the starting position A and the following car 20cm behind it. Set the leading car's speed to 1m/s and drive it along the outer loop path for one lap without collision. Requirements:
+- The average speed error of the leading car should not exceed 10%;
+- The leading car must stop at the "stop and wait" point accurately with an error not exceeding 5cm;
+- The stop time at the "stop and wait" point should be 5s with an error not exceeding 1s.
 
-### **说明**
-1. 作品中的小车中尺寸不大于 15cm（宽）X 25cm（长）。小车尺寸包括小
-车本体、以及小车所安装的传感器等总体的尺寸大小。
-2. 行驶场地上铺设白纸，行驶路径用 1cm 宽的黑色引导线来标志，可以印
-刷或打印在白纸上，也可以用黑色胶带纸直接粘贴在白纸上。轨迹上的起始点 A，
-用垂直贴在路径引导线的黑色标志线来标记，标志线为 2cm 宽、5cm 长。“等停
-指示”用间隔 5cm 的两条 2cm 宽、10cm 长的黑色平行标志线来标记，可以事先
-在一张小的纸片上打印好，测试时对接粘贴在行驶路径的引导线上即可。除题目
-要求的标记之外，行驶场地上不得有其他任何指示标记。
-3. 跟随小车的行驶完全由领头小车指挥控制，领头小车上有启动按键和设
-置按键，而跟随小车只有一个上电开关，不得有其他启动和操作按键。每一次行
-驶发车时，领头小车和跟随小车按照题目要求摆放在行驶路径的指定位置，跟随
-小车上电，处于等待接收领头小车指令的状态。领头小车一键启动行驶，直到整
-个行驶过程结束。
-4. 在两个小车跟随行驶过程中，除了两个小车间的相互通信外，不得有车
-外遥控和其他通信指令辅助。
-5. 在本题目要求 4 中，领头小车遇到“等停指示”需立即停车，停车后车身
-应在“等停指示”第二条横线以内，车头超出第二条横线的距离为停车位置误差。
+### **Instructions**
+1. The size of the cars in the project should not exceed 15cm (width) X 25cm (length). The size includes the car body and the overall size of the sensors installed on the car.
+2. The driving area is covered with white paper, and the driving path is marked with 1cm wide black guide lines, which can be printed or printed on the white paper or directly pasted with black tape on the white paper. The starting point A on the track is marked with a black marker line perpendicular to the path guide line, which is 2cm wide and 5cm long. The "stop and wait" indicator is marked with two 2cm wide, 10cm long black parallel marker lines spaced 5cm apart. It can be pre-printed on a small piece of paper and then glued to the driving path guide line during testing. Except for the markings required by the topic, there should be no other indicator marks on the driving area.
+3. The driving of the following car is completely controlled by the leading car. The leading car has a start button and a setting button, while the following car only has an on/off switch and no other start or operation buttons. Each time the cars are placed at the specified positions on the driving path, the following car is powered on and in a state of waiting to receive instructions from the leading car. The leading car starts driving with one button press until the entire driving process is completed.
+4. During the two-car following driving process, in addition to the mutual communication between the two cars, there should be no external remote control or other communication instructions.
+5. In requirement 4, when the leading car encounters the "stop and wait" indicator, it must stop immediately. After stopping, the car body should be within the second horizontal line of the "stop and wait" indicator, and the distance the car head exceeds the second horizontal line is the parking position error.
 
-## **实现方案**
+## **Implementation Plan**
 
-### <center>**摘要**</center>
+### <center>**Abstract**</center>
 
-&emsp;本系统两辆三轮二驱小车主控制系统采用TI MSP432。通过UWB 定位模块、
-HC-12 蓝牙模块、tb6612 电机驱动模块、灰度传感器和编码器并通过多传感器
-融合算法解算出控制器模型所需要的参数给出PWM 的可控制流，最终实现小车
-的运动控制，与此同时为了方便调试控制器参数，我们使用OLED 显示屏能够对
-有关参数的调节进行有效监控。最终两个小车能够按一定速度巡线跟随且依托
-于外部传感器完成相应的任务，经过反复调试和改进，循迹小车系统可靠，行
-驶稳定，达到了指标要求。
+&emsp;The main control system of the two three-wheeled, two-wheel drive cars in this system uses TI MSP432. Through UWB positioning modules, HC-12 Bluetooth modules, tb6612 motor drive modules, grayscale sensors, and encoders, and by using a multi-sensor fusion algorithm to calculate the parameters needed for the controller model to give controllable PWM, the motion control of the cars is ultimately achieved. Meanwhile, to facilitate debugging of controller parameters, we use an OLED display to effectively monitor adjustments to relevant parameters. Finally, the two cars can follow the line at a certain speed and rely on external sensors to complete corresponding tasks. After repeated testing and improvement, the line-following car system is reliable, driving stably, and meets the index requirements.
 
-###  **方案论证**
+### **Scheme Demonstration**
 
-#### **主控芯片选择**
+#### **Selection of Main Control Chip**
 
-1. 小车系统架构的选取思路第一是MCU 的性能，其中MCU 最重要的就是他
-的系统主频，这直接影响到MCU 的运行速度，整个小车涉及到很多个传感器的
-数据以及复杂的算法需要进行处理。如果MCU 的性能不能支持这样的运算，那
-么整个系统将不能实现他的各个功能，就会导致小车系统的崩溃。
+1. The first consideration for selecting the car system architecture is the performance of the MCU, with the system clock being the most important factor, which directly affects the operation speed of the MCU. The car involves many sensor data and complex algorithms that need to be processed. If the MCU's performance cannot support such calculations, the entire system will not be able to achieve its various functions, leading to a collapse of the car system.
 
-2. MCU 的IO 口也很重要，各个传感器的数据通过IO 口传输到对应的位置，
-比如USART,I2C,SPI,GPIO 的个数。
+2. The MCU's IO ports are also important, with data from various sensors transmitted to the corresponding positions via IO ports, such as the number of USART, I2C, SPI, and GPIO.
 
-3. 基于以上的需求我们经过几种不同的预期方案最终讨论如下：
+3. Based on the above requirements, we discussed several different expected solutions as follows:
 
-**方案一**：采用msp430，该款MCU 具有高性能、低功耗的6xx 系列旗舰
-型，达到25MIPS@3.3V，配备功耗优化的创新电源管理模块和USB 控制器，配
-备LCD 控制器，有256KB FLASH、18KB RAM，74Pin 引脚，功耗与5xx 系列相同，
-还额外集成了电压管理模块，但是该MCU 的主频还是太低。
+**Option 1**: Use msp430, this MCU has a high-performance, low-power 6xx series flagship model, reaching 25MIPS@3.3V, equipped with an innovative power management module and USB controller, equipped with an LCD controller, with 256KB FLASH, 18KB RAM, 74Pin, and the same power consumption as the 5xx series, but also integrates a voltage management module. However, the main frequency of this MCU is still too low.
 
-**方案二**：采用msp432MCU, 这款控制器有高速48MHZ 时钟，频率稳定可
-控制性高，结合我们预期使用的传感器融合方案进行专门化设计。并且能
-够提供更多的IO 口和板载外设，给我们的多传感器融合算法提供了有效的
-实现平台，但同时也给我们的设计和实现带来了一定的困难。  
+**Option 2**: Use msp432 MCU, this controller has a high-speed 48MHZ clock, stable frequency controllability, combined with our expected sensor fusion solution for specialized design. And it can provide more IO ports and onboard peripherals, giving our multi-sensor fusion algorithm an effective implementation platform, but also bringing certain difficulties to our design and implementation.
 
-&emsp;综合上述讨论我们选择了符合我们需求的方案二。
+&emsp;After the above discussion, we chose option 2 that meets our needs.
 
-#### **降压模块选择**
+#### **Selection of Voltage Regulator Module**
 
-**方案一**: 使用线性元器件LM7805 三端稳压器构成稳压电路，给单片机
-提供电压。它的输出纹波小，但是效率低，容易发热。
+**Option 1**: Use linear components LM7805 three-terminal voltage regulator to form a voltage regulator circuit to provide voltage for the microcontroller. It has a small output ripple but is inefficient and prone to heat.
 
-**方案二**: 使用元器件LM2596 构成稳压电路，它的效率高不容易发热，
-但是输出的纹波较大。
+**Option 2**: Use components LM2596 to form a voltage regulator circuit, which is efficient and not prone to heat, but has a larger output ripple.
 
-&emsp;综合对系统性能的考虑，小车依靠电池独立运行，需要高效稳压，而受输
-出纹波影响较小，因此选择方案二。
+&emsp;Considering the system performance, the car runs independently on batteries and requires efficient voltage regulation, while being less affected by output ripple, so option 2 is chosen.
 
-#### **小车电机选择**
+#### **Selection of Car Motor**
 
-**方案一**: 选用310 电机，动力强，但是重量大。
+**Option 1**: Use 310 motor, which has strong power but is heavy.
 
-**方案二**: 选用ng20 减速电机，动力稍弱，但是重量轻。  
+**Option 2**: Use ng20 reduction motor, which has slightly weaker power but is lighter.
 
-&emsp;经过反复研究，考虑到保持速度的同时维持姿态，最终选择了拥有更快
-转速和力矩大的310 电机。
+&emsp;After repeated research, considering maintaining speed while maintaining posture, the 310 motor with faster speed and larger torque was ultimately chosen.
 
-#### **驱动模块选择**
+#### **Selection of Drive Module**
 
-**方案一**: 使用MOS 管和全桥/半桥驱动芯片搭建电机驱动，可允许通过
-的电机电流大，可是结构复杂，体积较大。
+**Option 1**: Use MOSFET and full bridge/half bridge drive chip to build motor drive, which allows large motor current to pass, but the structure is complex and the volume is large.
 
-**方案二**: 使用基于TB6612 芯片的驱动模块，模块使用简单，方便接线，
-体积相对较小，但是可过电流小。
+**Option 2**: Use drive module based on TB6612 chip, which is simple to use, convenient for wiring, and relatively small in volume, but the current that can be passed is small.
 
-&emsp;经过综合考虑，小车体积不宜过大，且经过测试，TB6612 模块的驱动
-电流可以满足系统需求，因此选择方案二。
+&emsp;After comprehensive consideration, the car's volume should not be too large, and after testing, the drive current of the TB6612 module can meet the system requirements, so option 2 is chosen.
 
-### **理论分析与计算**
+### **Theoretical Analysis and Calculation**
 
-#### **小车运动控制设计**
+#### **Design of Car Motion Control**
 
-1. 按偏差的比例、积分、微分进行控制的控制器称为PID 控制器，PID 控
-制解决了自动控制理论所要解决的最为基本的问题，即系统的准确性、稳定性
-和实时性。根据路径识别的情况，对小车采取相应的控制，达到合理设置速度
-的目的。系统根据接收测速模块的速度值，通过PID 算法进行调节，进而控制
-直流电机进行转速的改变，从而控制小车加减速与转向。
+1. A controller that controls by proportional, integral, and derivative of the deviation is called a PID controller. PID control solves the most basic problem that automatic control theory needs to solve, which is the accuracy, stability, and real-time performance of the system. According to the situation of path recognition, the car is controlled accordingly to achieve the purpose of setting the speed reasonably. The system adjusts the DC motor's speed by using the PID algorithm based on the speed value received from the speed detection module, thereby controlling the car's acceleration, deceleration, and steering.
 
-&emsp;本组采用增量式PID 算法。增量式PID 控制是通过对控制量的增量（本次
-控制量和上次控制量的差值）进行PID 控制的一种控制算法。其基本公式为：
+&emsp;Our group uses the incremental PID algorithm. Incremental PID control is a control algorithm that performs PID control on the increment of the control amount (the difference between the current control amount and the last control amount). Its basic formula is:
 
 $$
     \Delta u_n=K_p[e_n-e_{n-1}]+K_i*e_n+K_d[e_n-2e_{n-1}+e_{n-2}]\tag{1}
 $$
 
-&emsp;其中，$\Delta u_n$为第 n 次输出增量，$e_n$为第n次偏差，$K_p、K_i、K_d$分别对应
-比例、积分、微分的系数。
+&emsp;Where $\Delta u_n$ is the nth output increment, $e_n$ is the nth deviation, and $K_p, K_i, K_d$ correspond to the coefficients of proportional, integral, and derivative, respectively.
 
-2. 转弯控制方法
+2. Turning Control Method
 
-&emsp;小车转弯采用差速控制方法，即通过设置不同的内侧轮和外侧轮速度改变
-小车运行方向。小车前进过程中，以红外传感器检测到的轨迹变化为转向条件，
-在测量得到的当前车速的基础上，分别调整内侧轮和外侧轮的的转速。内测轮
-速度减去当前速度的一定百分比，外侧轮加上当前速度的一定百分比，达到差
-速控制转向的目的，使小车循迹行驶。
+&emsp;The car's turning adopts differential speed control method, that is, by setting different inner wheel and outer wheel speeds to change the car's running direction. During the car's forward motion, the trajectory change detected by the infrared sensor is used as the turning condition. Based on the measured current car speed, the speeds of the inner wheel and outer wheel are adjusted separately. The inner wheel speed minus a certain percentage of the current speed, the outer wheel plus a certain percentage of the current speed, to achieve the purpose of differential speed control steering, making the car follow the track.
 
-3. 灰度传感器计算位置方法
+3. Grayscale Sensor Calculation Position Method
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图1灰度传感器基本控制原理.jpg"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图1灰度传感器基本控制原理.jpg" align="middle" />
     <br></br>
-    图1 灰度传感器基本控制原理
+    Figure 1 Basic Control Principle of Grayscale Sensor
 </div>
 
-&emsp;本系统利用灰度传感器检测地面轨迹。当发射的红外线照射到的目标为黑色时，
-被反射回来，收到的反馈信号很快就会变为高电平；我们从等间距排布的红外
-传感器阵列读取数据，赋予各红外传感器阵元以相应的位置信息。由于传感器
-接近地面，仅当下方检测到黑色粗线时才输出为“1”，我们对位置信息和传感
-器反馈数据进行逐位相乘，即可得到小车与轨迹的相对位置信息
+&emsp;This system uses grayscale sensors to detect the ground track. When the emitted infrared light hits a black target, it is reflected back, and the received feedback signal quickly becomes high. We read the data from the equally spaced infrared sensor array and assign each infrared sensor element with corresponding positional information. Since the sensor is close to the ground, it only outputs "1" when it detects a black thick line below. We multiply the positional information and the sensor feedback data bit by bit to obtain the relative positional information of the car from the track.
 
-#### **小车通信模式分析**
+#### **Analysis of Car Communication Mode**
 
-&emsp;本系统采用HC-12 无线模块来进行两车的通信，工作频段为433.4MHz
-至473.0MHz，具有100个通道通道步进为40KHz。
+&emsp;This system uses the HC-12 wireless module for communication between the two cars, operating in the frequency band of 433.4MHz to 473.0MHz, with 100 channels and a step of 40KHz.
 
-#### **小车距离控制**
+#### **Distance Control of Cars**
 
-&emsp;本系统的距离控制采用超宽带（UWB）定位技术利用事先布置在前车的锚
-节点和桥节点，与后车的盲节点进行通讯，通过测量出不同基站与移动终端的
-传输时延差来进行定位。通过UWB 返回的数据对两个小车速度进行整理，把数
-据打包到PID 里通过PID 的返回的PWM 对两小车进行控速，进而控制小车的距
-离。
+&emsp;This system's distance control uses Ultra-Wideband (UWB) positioning technology, which utilizes anchor nodes and bridge nodes pre-arranged on the front car, and communicates with the blind nodes on the rear car, positioning by measuring the transmission time delay difference between different base stations and the mobile terminal. The data returned by UWB is used to organize the speeds of the two cars, package the data into the PID, and control the speeds of the two cars through the PWM returned by the PID, thereby controlling the distance between the cars.
 
-### **电路与程序设计**
+### **Circuit and Program Design**
 
-#### **系统组成与框图**
+#### **System Composition and Block Diagram**
 
-&emsp;本系统总体框图如图2 所示。处理MCU 为MSP432,外围电路主要由灰度
-传感器、驱动模块、稳压模块、速度检测模块，下图分析各个模块的设计的组
-成。
+&emsp;The overall block diagram of this system is shown in Figure 2. The processing MCU is MSP432, and the peripheral circuits mainly consist of grayscale sensors, drive modules, voltage regulator modules, and speed detection modules. The following diagram analyzes the composition of each module design.
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图2系统总体框图.png"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图2系统总体框图.png" align="middle" />
     <br></br>
-    图2 系统总体框图
+    Figure 2 Overall Block Diagram of the System
 </div>
 
-#### **小车寻迹电路**
+#### **Car Tracking Circuit**
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图3小车寻迹电路.jpg"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图3小车寻迹电路.jpg" align="middle" />
     <br></br>
-    图3 小车寻迹电路
+    Figure 3 Car Tracking Circuit
 </div>
 
-#### **小车间通信电路**
+#### **Car-to-Car Communication Circuit**
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图4小车间通信电路.jpg"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图4小车间通信电路.jpg" align="middle" />
     <br></br>
-    图4 小车间通信电路
+    Figure 4 Car-to-Car Communication Circuit
 </div>
 
-#### **小车防撞电路**
+#### **Car Anti-Collision Circuit**
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图5小车防撞电路.jpg"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图5小车防撞电路.jpg" align="middle" />
     <br></br>
-    图5 小车防撞电路
+    Figure 5 Car Anti-Collision Circuit
 </div>
 
-#### **程序总流程图**
+#### **Program Overall Flowchart**
 
-<div align = "center">    
-    <img src="/zh/小车跟随行驶系统/图6程序总流程图.jpg"  align = "middle" />
+<div align="center">    
+    <img src="/zh/小车跟随行驶系统/图6程序总流程图.jpg" align="middle" />
     <br></br>
-    图6 程序总流程图
+    Figure 6 Program Overall Flowchart
 </div>
 
-### **测试方案与测试结果**
+### **Test Plan and Test Results**
 
-#### **测试方法与仪器**
+#### **Test Methods and Instruments**
 
-1. 仪器：示波器（DSOX2012A）、直流稳压电源（GPS-3303C）、万用表
-（DT9205A）
+1. Instruments: Oscilloscope (DSOX2012A), DC regulated power supply (GPS-3303C), Multimeter (DT9205A)
 
-2. 测试方法：测试方法为先部分后整机：先将各模块电路分别进行测试，
-确保能实现功能后，组装好小车，烧录程序；再将小车进行整体测试。将小车
-放在跑道上，首先测试小车寻迹功能是否完整，其次在测试双车系统的测距功
-能是否完好，分别去测试小车的速度和两车停止时的距离的误差。不断设定小
-车的速度，重复上诉操作
+2. Test Method: Test method is first part then whole: First test each module circuit separately to ensure that it can achieve the function, then assemble the car, burn the program; then test the car as a whole. Place the car on the track, first test whether the car's tracking function is complete, then test whether the distance measurement function of the dual-car system is good, separately test the speed of the car and the distance error when the two cars stop. Continuously set the car's speed, repeat the above operation.
 
 <center>
-(1) 基本要求一：两车的速度为0.5m/s,两车的间距为20cm
+(1) Basic Requirement One: The speed of both cars is 0.5m/s, the distance between the two cars is 20cm
 
-表1 测试结果记录表
+Table 1 Test Result Record Table
 </center>
 
-|测试次数|目标时间/s|实际时间/s|停车点两车间距误差/cm|
+|Test Number|Target Time/s|Actual Time/s|Stopping Distance Error/cm|
 |:----:|:----:|:----:|:----:|
 |1|18|16|2.6|
 |2|18|17|1.0|
 |3|18|18.6|0.6|
 
 <center>
-(2) 基本要求二：两车的速度为0.5m/s,车的间距为20cm
+(2) Basic Requirement Two: The speed of both cars is 0.5m/s, the distance between the cars is 20cm
 
-表2 测试结果记录表
+Table 2 Test Result Record Table
 </center>
 
-|测试次数|目标距离/cm|目标时间/s|实际时间/s|停车点误差/cm|
+|Test Number|Target Distance/cm|Target Time/s|Actual Time/s|Stopping Point Error/cm|
 |:----:|:----:|:----:|:----:|:----:|
 |1|20|24|20|1.3|
 |2|20|24|16.1|1.6|
@@ -286,9 +202,6 @@ $$
 |5|20|24|23|0.6|
 |6|20|24|24.3|0.6|
 
-#### **结果分析**
+#### **Result Analysis**
 
-&emsp;各部分硬件电路都测试正常，能实现各自的功能。代码编写正确无误，
-能实现预期功能,小车可以实现寻迹与追踪功能，并且到达制定位置停止，蜂鸣
-器响，速度也能到达制定要求。该系统基本实现了题目的要求，小车行驶平稳，
-性能良好。但在一些弯道处有卡顿,所以在程序与硬件性能上进一步优化。
+&emsp;Each part of the hardware circuit tested normally, able to achieve their respective functions. The code is written correctly without error, able to achieve the expected function, the car can achieve tracking and tracking function, and reach the designated position to stop, the buzzer sounds, the speed can also reach the specified requirements. The system basically achieves the requirements of the topic, the car travels smoothly, the performance is good. But there is a bit of a stutter at some corners, so further optimization is needed in the program and hardware performance.

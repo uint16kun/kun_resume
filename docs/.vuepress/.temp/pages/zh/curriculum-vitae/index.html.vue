@@ -109,7 +109,7 @@
 <h2 id="编程语言" tabindex="-1"><a class="header-anchor" href="#编程语言"><span>编程语言:</span></a></h2>
 <p>C, Python, C++, JavaScript, Verilog, MATLAB, Lua</p>
 <h2 id="软件" tabindex="-1"><a class="header-anchor" href="#软件"><span>软件:</span></a></h2>
-<p>Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp</p>
+<p>Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp, Quartus II</p>
 <h2 id="语言" tabindex="-1"><a class="header-anchor" href="#语言"><span>语言:</span></a></h2>
 <p>TOEIC 690</p>
 </div></template>

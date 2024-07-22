@@ -1,17 +1,17 @@
 ---
-title: 无刷电机驱动电路及FOC控制算法设计
+title: ブラシレスモーター駆動回路及びFOC制御アルゴリズム設計
 ---
 
-## **硬件设计**
+## **ハードウェア設計**
 
-### **六通道**
+### **六チャンネル**
 
 <img src="/zh/无刷电机/图1.png"  align = "middle" />
 
 <img src="/zh/无刷电机/图2.png"  align = "middle" />
 
 
-### **三通道**
+### **三チャンネル**
 
 <img src="/zh/无刷电机/图3.png"  align = "middle" />
 
@@ -20,10 +20,9 @@ title: 无刷电机驱动电路及FOC控制算法设计
 <img src="/zh/无刷电机/图5.png"  align = "middle" />
 
 
-## **软件设计**
+## **ソフトウェア設計**
 
-[存放在github的源代码](https://github.com/uint16kun/kun_project/blob/main/lib_kun/Ardunio/foc_kun/v1.0/foc_kun.cpp)
-
+[githubに保存されているソースコード](https://github.com/uint16kun/kun_project/blob/main/lib_kun/Ardunio/foc_kun/v1.0/foc_kun.cpp)
 ``` c++
 #include "foc_kun.h"
 foc_kun::foc_kun(void)

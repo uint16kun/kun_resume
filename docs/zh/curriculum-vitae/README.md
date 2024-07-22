@@ -88,7 +88,7 @@ C, Python, C++, JavaScript, Verilog, MATLAB, Lua
 
 ## 软件:
 
-Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp
+Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp, Quartus II
 
 ## 语言:
 

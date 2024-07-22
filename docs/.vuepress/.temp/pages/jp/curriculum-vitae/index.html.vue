@@ -109,7 +109,7 @@
 <h2 id="プログラミング言語" tabindex="-1"><a class="header-anchor" href="#プログラミング言語"><span>プログラミング言語:</span></a></h2>
 <p>C, Python, C++, JavaScript, Verilog, MATLAB, Lua</p>
 <h2 id="ソフトウェア" tabindex="-1"><a class="header-anchor" href="#ソフトウェア"><span>ソフトウェア:</span></a></h2>
-<p>Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp</p>
+<p>Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW, Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell, Xftp, Quartus II</p>
 <h2 id="言語" tabindex="-1"><a class="header-anchor" href="#言語"><span>言語:</span></a></h2>
 <p>TOEIC 690</p>
 </div></template>

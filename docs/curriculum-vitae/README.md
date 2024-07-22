@@ -137,7 +137,7 @@ C, Python, C++, JavaScript, Verilog, MATLAB, Lua
 
 Keil, STM32CubeMX, Altium Designer, LCEDA, SolidWorks, LabVIEW,
 Multisim, Visual Studio Code, Git, Markdown, LaTeX, Anaconda, Xshell,
-Xftp
+Xftp, Quartus II
 
 ## Language: 
 

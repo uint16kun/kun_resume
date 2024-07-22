@@ -1,13 +1,13 @@
-<template><div><h2 id="硬件设计" tabindex="-1"><a class="header-anchor" href="#硬件设计"><span><strong>硬件设计</strong></span></a></h2>
-<h3 id="六通道" tabindex="-1"><a class="header-anchor" href="#六通道"><span><strong>六通道</strong></span></a></h3>
+<template><div><h2 id="ハードウェア設計" tabindex="-1"><a class="header-anchor" href="#ハードウェア設計"><span><strong>ハードウェア設計</strong></span></a></h2>
+<h3 id="六チャンネル" tabindex="-1"><a class="header-anchor" href="#六チャンネル"><span><strong>六チャンネル</strong></span></a></h3>
 <img src="/zh/无刷电机/图1.png"  align = "middle" />
 <img src="/zh/无刷电机/图2.png"  align = "middle" />
-<h3 id="三通道" tabindex="-1"><a class="header-anchor" href="#三通道"><span><strong>三通道</strong></span></a></h3>
+<h3 id="三チャンネル" tabindex="-1"><a class="header-anchor" href="#三チャンネル"><span><strong>三チャンネル</strong></span></a></h3>
 <img src="/zh/无刷电机/图3.png"  align = "middle" />
 <img src="/zh/无刷电机/图4.png"  align = "middle" />
 <img src="/zh/无刷电机/图5.png"  align = "middle" />
-<h2 id="软件设计" tabindex="-1"><a class="header-anchor" href="#软件设计"><span><strong>软件设计</strong></span></a></h2>
-<p><a href="https://github.com/uint16kun/kun_project/blob/main/lib_kun/Ardunio/foc_kun/v1.0/foc_kun.cpp" target="_blank" rel="noopener noreferrer">存放在github的源代码</a></p>
+<h2 id="ソフトウェア設計" tabindex="-1"><a class="header-anchor" href="#ソフトウェア設計"><span><strong>ソフトウェア設計</strong></span></a></h2>
+<p><a href="https://github.com/uint16kun/kun_project/blob/main/lib_kun/Ardunio/foc_kun/v1.0/foc_kun.cpp" target="_blank" rel="noopener noreferrer">githubに保存されているソースコード</a></p>
 <div class="language-c++ line-numbers-mode" data-highlighter="prismjs" data-ext="c++" data-title="c++"><pre v-pre class="language-c++"><code><span class="line">#include &quot;foc_kun.h&quot;</span>
 <span class="line">foc_kun::foc_kun(void)</span>
 <span class="line">{</span>
