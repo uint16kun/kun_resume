@@ -1,1 +1,1 @@
-export default {"/": () => import('./root.js'),"/jp/": () => import('./jp.js'),"/zh/": () => import('./zh.js')}
+export default {"/jp/": () => import('./jp.js'),"/zh/": () => import('./zh.js'),"/": () => import('./root.js')}

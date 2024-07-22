@@ -45,11 +45,15 @@ export default defineUserConfig({
           {
             text: 'Curriculum Vitae',
             link: '/curriculum-vitae/',
+          },
+          {
+            text: 'transcript',
+            link: '/transcript/',
           }],
         sidebar: {
           '/my-projects/': [
             {
-              text: '我的项目',
+              text: 'My Projects',
               link: '/my-projects/',
               children: [
                 'Moving target control and automatic tracking system',
@@ -76,6 +80,10 @@ export default defineUserConfig({
           {
             text: '简历',
             link: '/zh/curriculum-vitae/',
+          },
+          {
+            text: '成绩单',
+            link: '/zh/transcript/',
           }],
         sidebar: {
           '/zh/my-projects/': [
@@ -107,6 +115,10 @@ export default defineUserConfig({
           {
             text: '履歴書',
             link: '/jp/curriculum-vitae/',
+          },
+          {
+            text: '成績表',
+            link: '/jp/transcript/',
           }],
         sidebar: {
           '/jp/my-projects/': [

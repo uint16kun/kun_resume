@@ -14,6 +14,7 @@ title: 信息
 |中口 俊哉|医学图像|[https://nlab.tms.chiba-u.jp/](https://nlab.tms.chiba-u.jp/)|成员中国人较多|
 |高橋 応明|生物电磁工程|[https://www.cfme.chiba-u.jp/~takahashi/](https://www.cfme.chiba-u.jp/~takahashi/)|研究方向感兴趣|
 |斋藤和之|微波的医疗应用|[https://www.cfme.chiba-u.jp/~saito/index.html](https://www.cfme.chiba-u.jp/~saito/index.html)|研究方向感兴趣|
+|兪 文偉|生物运动控制与支持|[https://www.tms.chiba-u.jp/~yu/](https://www.tms.chiba-u.jp/~yu/)|教授是中国人|
 
 感觉其它的研究方向都能够申请
 

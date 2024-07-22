@@ -41,6 +41,12 @@
 <td style="text-align:center"><a href="https://www.cfme.chiba-u.jp/~saito/index.html" target="_blank" rel="noopener noreferrer">https://www.cfme.chiba-u.jp/~saito/index.html</a></td>
 <td style="text-align:center">研究方向感兴趣</td>
 </tr>
+<tr>
+<td style="text-align:center">兪 文偉</td>
+<td style="text-align:center">生物运动控制与支持</td>
+<td style="text-align:center"><a href="https://www.tms.chiba-u.jp/~yu/" target="_blank" rel="noopener noreferrer">https://www.tms.chiba-u.jp/~yu/</a></td>
+<td style="text-align:center">教授是中国人</td>
+</tr>
 </tbody>
 </table>
 <p>感觉其它的研究方向都能够申请</p>

@@ -33,14 +33,13 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 
 ## Subject competition 
 
--   2022 **TI Cup** National College Student Electronic Design
-    Competition **Provincial Third Prize (TOP 40%)**
+-   2022 **TI Cup** National Undergraduate Electronic Design
+    Contest **Provincial Third Prize (TOP 40%)**
 
--   2023 **TI Cup** National College Student Electronic Design
-    Competition **National Second Prize (TOP 8%)**
+-   2023 **TI Cup** National Undergraduate Electronic Design
+    Contest **National Second Prize (TOP 8%)**
 
--   2024 **Renesas Cup** National College Electronic Design Competition
-    Technology Frontier Invitation Competition **Provincial First
+-   2024 **Renesas Cup** National College Student Electronic Design Contest Information Technology Frontier Special Contest **Provincial First
     Prize** 
 
 # Research 
@@ -59,8 +58,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 
 # Competition Project 
 
--   [Moving target control and automatic tracking
-    system](https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
+-   [Moving target control and automatic tracking system](https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
     Advisor:[Lili
     Yao](http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm)
 

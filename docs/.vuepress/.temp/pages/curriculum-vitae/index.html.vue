@@ -36,16 +36,15 @@ Processing (86)</p>
 <h2 id="subject-competition" tabindex="-1"><a class="header-anchor" href="#subject-competition"><span>Subject competition</span></a></h2>
 <ul>
 <li>
-<p>2022 <strong>TI Cup</strong> National College Student Electronic Design
-Competition <strong>Provincial Third Prize (TOP 40%)</strong></p>
+<p>2022 <strong>TI Cup</strong> National Undergraduate Electronic Design
+Contest <strong>Provincial Third Prize (TOP 40%)</strong></p>
 </li>
 <li>
-<p>2023 <strong>TI Cup</strong> National College Student Electronic Design
-Competition <strong>National Second Prize (TOP 8%)</strong></p>
+<p>2023 <strong>TI Cup</strong> National Undergraduate Electronic Design
+Contest <strong>National Second Prize (TOP 8%)</strong></p>
 </li>
 <li>
-<p>2024 <strong>Renesas Cup</strong> National College Electronic Design Competition
-Technology Frontier Invitation Competition <strong>Provincial First
+<p>2024 <strong>Renesas Cup</strong> National College Student Electronic Design Contest Information Technology Frontier Special Contest <strong>Provincial First
 Prize</strong></p>
 </li>
 </ul>
@@ -73,8 +72,7 @@ Prize</strong></p>
 <h1 id="competition-project" tabindex="-1"><a class="header-anchor" href="#competition-project"><span>Competition Project</span></a></h1>
 <ul>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">Moving target control and automatic tracking
-system</a>(2023.8)
+<p><a href="https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">Moving target control and automatic tracking system</a>(2023.8)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm" target="_blank" rel="noopener noreferrer">Lili
 Yao</a></p>
 <ul>
