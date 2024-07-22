@@ -5,6 +5,7 @@ import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import mathjax3 from 'markdown-it-mathjax3'
 export default defineUserConfig({
+  enhanceAppFiles: ['./enhanceApp.js'],
   extendsMarkdown: md => {
     md.use(mathjax3)
     md.linkify.set({ fuzzyEmail: false })
@@ -66,6 +67,8 @@ export default defineUserConfig({
               ]
             },
           ],
+          '/curriculum-vitae/': [],
+          '/transcript/': [],
         },
         selectLanguageName: 'English',
         selectLanguageText: 'Languages',
@@ -101,6 +104,8 @@ export default defineUserConfig({
               ]
             },
           ],
+          '/zh/curriculum-vitae/': [],
+          '/zh/transcript/': [],
         },
         selectLanguageName: '简体中文',
         selectLanguageText: '语言',
@@ -136,6 +141,8 @@ export default defineUserConfig({
               ]
             },
           ],
+          '/jp/curriculum-vitae/': [],
+          '/jp/transcript/': [],
         },
         selectLanguageName: '日本語',
         selectLanguageText: '言語',
@@ -165,8 +172,8 @@ export default defineUserConfig({
         '/jp/': {
           placeholder: '検索',
         }
-      }
-    }),
+      },
+    },),
   ],
   markdown: {
     // 开启代码块的行号

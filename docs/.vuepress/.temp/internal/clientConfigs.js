@@ -8,6 +8,7 @@ import * as clientConfig6 from 'G:/Vscode/vue/kun_resume/node_modules/@vuepress/
 import * as clientConfig7 from 'G:/Vscode/vue/kun_resume/docs/.vuepress/.temp/markdown-image/client.js'
 import * as clientConfig8 from 'G:/Vscode/vue/kun_resume/docs/.vuepress/.temp/sass-palette/load-hope.js'
 import * as clientConfig9 from 'G:/Vscode/vue/kun_resume/node_modules/vuepress-plugin-search-pro/lib/client/config.js'
+import * as clientConfig10 from 'G:/Vscode/vue/kun_resume/docs/.vuepress/client.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -20,4 +21,5 @@ export const clientConfigs = [
   clientConfig7,
   clientConfig8,
   clientConfig9,
+  clientConfig10,
 ].map((m) => m.default).filter(Boolean)
