@@ -72,7 +72,7 @@ Prize</strong></p>
 <h1 id="competition-project" tabindex="-1"><a class="header-anchor" href="#competition-project"><span>Competition Project</span></a></h1>
 <ul>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">Moving target control and automatic tracking system</a>(2023.8)
+<p><a href="http://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">Moving target control and automatic tracking system</a>(2023.8)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm" target="_blank" rel="noopener noreferrer">Lili
 Yao</a></p>
 <ul>
@@ -82,7 +82,7 @@ real-time detection, tracking, and control of moving targets.</li>
 </ul>
 </li>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html" target="_blank" rel="noopener noreferrer">High-throughput phenotyping system for potted
+<p><a href="http://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html" target="_blank" rel="noopener noreferrer">High-throughput phenotyping system for potted
 plants</a>(2024.4)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
 Fan</a></p>
@@ -95,7 +95,7 @@ page developed using the Vue framework.</li>
 </li>
 </ul>
 <!-- -   [Smart medicine delivery
-    car](https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
+    car](http://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -105,7 +105,7 @@ page developed using the Vue framework.</li>
         rooms.
 
 -   [Rolling ball control
-    system](https://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
+    system](http://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -115,7 +115,7 @@ page developed using the Vue framework.</li>
         algorithm to control the ball's position. -->
 <ul>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">Car following driving
+<p><a href="http://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">Car following driving
 system</a>(2022.7)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
 Fan</a></p>
@@ -127,7 +127,7 @@ algorithm.</li>
 </ul>
 </li>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html" target="_blank" rel="noopener noreferrer">Non-contact object size and shape
+<p><a href="http://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html" target="_blank" rel="noopener noreferrer">Non-contact object size and shape
 measurement</a>(2023.5)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
 Fan</a></p>
@@ -138,7 +138,7 @@ distance through a 2D pan-tilt and laser ranging.</li>
 </ul>
 </li>
 <li>
-<p><a href="https://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">Brushless motor drive circuit and FOC control algorithm
+<p><a href="http://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">Brushless motor drive circuit and FOC control algorithm
 design</a>(2023.4)
 Advisor:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">Xiangxiang
 Fan</a></p>

@@ -10,12 +10,13 @@ export default defineClientConfig({
         timestamp: new Date().toISOString()
       };
 
-      axios.post('http://127.0.0.1:5000', logData)
+      axios.post('http://8.149.241.87:5000/api/resume/log', logData)
         .then(response => {
-          // console.log('路径记录成功:', response.data);
+          // 请求成功时的处理逻辑
         })
         .catch(error => {
-          // console.error('记录路径时出错:', error);
+          // 请求失败时的处理逻辑
+          // 这里可以选择不输出任何错误信息
         });
 
       // 继续导航

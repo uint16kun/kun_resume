@@ -19,7 +19,7 @@ def log_request():
     server_time = now.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
     client_ip = request.remote_addr
     data = request.get_json()
-    print(f"IP: {client_ip}, Client Time: {data['timestamp']}, Server Time: {server_time}, Page: {data['page']}")
+    print(f"IP: {client_ip}, Client Timestamp: {data['timestamp']}, Server Timestamp: {server_time}, Page: {data['page']}")
     return jsonify({"status": "success"}), 200
 
 if __name__ == '__main__':

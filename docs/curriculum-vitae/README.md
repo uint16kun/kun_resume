@@ -58,7 +58,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 
 # Competition Project 
 
--   [Moving target control and automatic tracking system](https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
+-   [Moving target control and automatic tracking system](http://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
     Advisor:[Lili
     Yao](http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm)
 
@@ -67,7 +67,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         real-time detection, tracking, and control of moving targets.
 
 -   [High-throughput phenotyping system for potted
-    plants](https://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html)(2024.4)
+    plants](http://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html)(2024.4)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -77,7 +77,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         page developed using the Vue framework.
 
 <!-- -   [Smart medicine delivery
-    car](https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
+    car](http://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -87,7 +87,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         rooms.
 
 -   [Rolling ball control
-    system](https://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
+    system](http://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -97,7 +97,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         algorithm to control the ball's position. -->
 
 -   [Car following driving
-    system](https://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html)(2022.7)
+    system](http://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html)(2022.7)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -107,7 +107,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         algorithm.
 
 -   [Non-contact object size and shape
-    measurement](https://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html)(2023.5)
+    measurement](http://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html)(2023.5)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
@@ -116,7 +116,7 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         distance through a 2D pan-tilt and laser ranging.
 
 -   [Brushless motor drive circuit and FOC control algorithm
-    design](https://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4)
+    design](http://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4)
     Advisor:[Xiangxiang
     Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
