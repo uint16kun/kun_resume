@@ -58,18 +58,18 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 
 # Competition Project 
 
--   [Moving target control and automatic tracking system](http://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
+-   [Moving target control and automatic tracking system](https://resume.uint16kun.com/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html)(2023.8)
     Advisor:[Lili
-    Yao](http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm)
+    Yao](https://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm)
 
     -   A 2D platform built using NVIDIA Jetson platform, OpenCV
         computer vision library, and brushless motors to achieve
         real-time detection, tracking, and control of moving targets.
 
 -   [High-throughput phenotyping system for potted
-    plants](http://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html)(2024.4)
+    plants](https://resume.uint16kun.com/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html)(2024.4)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   A 2D rotating platform using stepper motors and a single-point
         laser ranging module for 3D modeling of plants, analyzing plant
@@ -77,9 +77,9 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         page developed using the Vue framework.
 
 <!-- -   [Smart medicine delivery
-    car](http://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
+    car](https://resume.uint16kun.com/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   A microcontroller running a model trained with the YOLOv3
         algorithm to recognize room numbers, simulating the delivery and
@@ -87,9 +87,9 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         rooms.
 
 -   [Rolling ball control
-    system](http://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
+    system](https://resume.uint16kun.com/my-projects/Rolling%20ball%20control%20system.html)(2022.7)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   Using the OpenMV library in STM32H7 to identify the ball,
         monitor the position of the rolling ball in real-time, and
@@ -97,9 +97,9 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         algorithm to control the ball's position. -->
 
 -   [Car following driving
-    system](http://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html)(2022.7)
+    system](https://resume.uint16kun.com/my-projects/Car%20following%20driving%20system.html)(2022.7)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   Line tracking through infrared sensors, distance monitoring
         through UWB modules, data exchange through wireless serial
@@ -107,18 +107,18 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
         algorithm.
 
 -   [Non-contact object size and shape
-    measurement](http://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html)(2023.5)
+    measurement](https://resume.uint16kun.com/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html)(2023.5)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   Analyzing the shape and pixel length of graphic edges through a
         camera, calculating geometric parameters after obtaining the
         distance through a 2D pan-tilt and laser ranging.
 
 -   [Brushless motor drive circuit and FOC control algorithm
-    design](http://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4)
+    design](https://resume.uint16kun.com/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html)(2023.4)
     Advisor:[Xiangxiang
-    Fan](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+    Fan](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   Designing a three-phase full-bridge drive circuit for brushless
         motors and controlling it using the FOC algorithm.
