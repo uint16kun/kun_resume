@@ -65,40 +65,40 @@
 <h1 id="研究とプロジェクト" tabindex="-1"><a class="header-anchor" href="#研究とプロジェクト"><span>研究とプロジェクト</span></a></h1>
 <ul>
 <li>
-<p><a href="http://resume.uint16kun.com/jp/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">移動目標制御と自動追跡システム</a>(2023.8) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm" target="_blank" rel="noopener noreferrer">姚立立</a></p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/Moving%20target%20control%20and%20automatic%20tracking%20system.html" target="_blank" rel="noopener noreferrer">移動目標制御と自動追跡システム</a>(2023.8) 指導教員:<a href="https://xxgcxy.zjhu.edu.cn/2023/0411/c5546a193663/page.htm" target="_blank" rel="noopener noreferrer">姚立立</a></p>
 <ul>
 <li>NVIDIA Jetsonプラットフォーム、OpenCVコンピュータビジョンライブラリ、およびブラシレスモータを使用して構築された2Dプラットフォームで、移動目標のリアルタイム検出、追跡、制御を実現。</li>
 </ul>
 </li>
 <li>
-<p><a href="http://resume.uint16kun.com/jp/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html" target="_blank" rel="noopener noreferrer">鉢植え植物の高スループット表現型分析システム</a>(2024.4) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/High-throughput%20phenotyping%20system%20for%20potted%20plants.html" target="_blank" rel="noopener noreferrer">鉢植え植物の高スループット表現型分析システム</a>(2024.4) 指導教員:<a href="https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
 <ul>
 <li>ステッピングモータと単点レーザ測距モジュールを使用した2D回転プラットフォームで、植物の3Dモデリングを行い、スペクトル分析により植物の成長を分析し、Vueフレームワークで開発されたウェブページにデータを表示。</li>
 </ul>
 </li>
 </ul>
-<!-- -   [スマート薬品配送車](http://resume.uint16kun.com/jp/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5) 指導教員:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+<!-- -   [スマート薬品配送車](https://resume.uint16kun.com/jp/my-projects/Smart%20medicine%20delivery%20car.html)(2022.5) 指導教員:[范祥祥](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   YOLOv3アルゴリズムでトレーニングされたモデルを実行するマイクロコントローラを使用して部屋番号を認識し、病院の薬局と患者部屋間の薬品配送と回収をシミュレート。
 
--   [転がるボール制御システム](http://resume.uint16kun.com/jp/my-projects/Rolling%20ball%20control%20system.html)(2022.7) 指導教員:[范祥祥](http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
+-   [転がるボール制御システム](https://resume.uint16kun.com/jp/my-projects/Rolling%20ball%20control%20system.html)(2022.7) 指導教員:[范祥祥](https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm)
 
     -   STM32H7のOpenMVライブラリを使用してボールを認識し、リアルタイムで転がるボールの位置を監視し、PIDアルゴリズムを使用してサーボモータの傾斜角度を制御してボールの位置を制御。 -->
 <ul>
 <li>
-<p><a href="http://resume.uint16kun.com/jp/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">車両追従走行システム</a>(2022.7) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/Car%20following%20driving%20system.html" target="_blank" rel="noopener noreferrer">車両追従走行システム</a>(2022.7) 指導教員:<a href="https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
 <ul>
 <li>赤外線センサを使用してライントレースを行い、UWBモジュールで距離を監視し、無線シリアル通信モジュールでデータを交換し、PIDアルゴリズムで距離を制御。</li>
 </ul>
 </li>
 <li>
-<p><a href="http://resume.uint16kun.com/jp/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html" target="_blank" rel="noopener noreferrer">非接触物体サイズと形状測定</a>(2023.5) 指導教員:<a href="http://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/Non-contact%20object%20size%20and%20shape%20measurement.html" target="_blank" rel="noopener noreferrer">非接触物体サイズと形状測定</a>(2023.5) 指導教員:<a href="https://xxgcxy.zjhu.edu.cn/2021/0326/c5544a166633/page.htm" target="_blank" rel="noopener noreferrer">范祥祥</a></p>
 <ul>
 <li>カメラを使用して図形のエッジの形状とピクセル長を分析し、2Dパンタイルとレーザ測距で距離を取得した後、幾何学的パラメータを計算。</li>
 </ul>
 </li>
 <li>
-<p><a href="http://resume.uint16kun.com/jp/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">ブラシレスモータ駆動回路及びFOC制御アルゴリズム設計</a>(2023.4)</p>
+<p><a href="https://resume.uint16kun.com/jp/my-projects/Brushless%20motor%20drive%20circuit%20and%20FOC%20control%20algorithm%20design.html" target="_blank" rel="noopener noreferrer">ブラシレスモータ駆動回路及びFOC制御アルゴリズム設計</a>(2023.4)</p>
 <ul>
 <li>ブラシレスモータの三相フルブリッジ駆動回路を設計し、FOCアルゴリズムを使用して制御。</li>
 </ul>
