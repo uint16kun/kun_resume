@@ -39,8 +39,8 @@ Email: uint16.kun@gmail.com  Homepage: resume.uint16kun.com
 -   2023 **TI Cup** National Undergraduate Electronic Design
     Contest **National Second Prize (TOP 8%)**
 
--   2024 **Renesas Cup** National College Student Electronic Design Contest Information Technology Frontier Special Contest **Provincial First
-    Prize** 
+-   2024 **Renesas Cup** National College Student Electronic Design Contest Information Technology Frontier Special Contest **First Prize in Eastern Division** 
+-   2024 **Renesas Cup** National College Student Electronic Design Contest Information Technology Frontier Special Contest **National Third Prize**
 
 # Research 
 
